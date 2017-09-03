@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GreenState</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="overlay-menu">
+       <p>
+         <% if current_user %>
+         <p>
+           <%= link_to "Home", root_path %> | User: <%= current_user.email %> | <%= link_to "Sign out", destroy_user_session_path, method: 'delete' %> | <%= link_to "User Profile", user_path(current_user) %>
+         </p>
+         <% else %>
+         <p>
+           <%= link_to "Home", root_path %> | <%= link_to 'Sign In', new_user_session_path %> |
+           <%= link_to 'Sign Up', new_user_registration_path %>
+         </p>
+         <% end %>
+       </p>
+     </nav>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>
