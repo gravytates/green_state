@@ -1,0 +1,167 @@
+<%#= render "layouts/errors", :object => @game %>
+
+
+<div class="row">
+  <div class="container">
+    <div class="well">
+      <h2>Take the C0<sub>2</sub> Quiz!</h2>
+      <br>
+      <%= form_for @co2_estimate do |f| %>
+
+        <p><%#= f.label :nat_gas, "On average, how much do you pay per month for natural gas?"%></p>
+        <%#= f.text_field :nat_gas %><br><br>
+
+        <hr>
+        <%= f.submit :class => "btn btn-default" %>
+      <% end %>
+
+
+
+
+
+
+         <form id="input" class="" action="index.html" method="post">
+           <div id="carbonQuiz">
+             <div class="monthlyBill">
+              <label for="monthlyBill">On average, how much do you pay per month for natural gas?</label>
+              <input id="natgas" class="form-control" placeholder="enter your avg. monthly bill" type="number" min="0">
+             </div>
+             <br>
+             <div class="monthlyBill">
+               <label for="monthlyBill">On average, how much do you pay per month for fuel oil?</label>
+               <input id="fuel" class="form-control" placeholder="enter your avg. monthly bill" type="number" min="0">
+             </div>
+             <br>
+             <div class="monthlyElectric">
+               <label for="monthlyElectric">How much do you pay for electricity each month?</label><br>
+               <input id="electricity" class="form-control" type="number" min="0" value=""placeholder="enter your avg monthly bill"><br>
+             </div>
+
+             <label for="modeOfTransportation">What is your primary mode of transportation?</label>
+             <br>
+             <select id="mode">
+               <option value="">Please choose a transportation mode...</option>
+               <option value="0">walk</option>
+               <option value="0">bike</option>
+               <option value=".36">the MAX</option>
+               <option value=".56">bus</option>
+               <option value="1.32">truck (older than 2016)</option>
+               <option value=".94">small pickup</option>
+               <option value="1.1">standard pickup</option>
+               <option value=".39">hybrid</option>
+               <option value=".84">sedan</option>
+             </select>
+             <br>
+             <br>
+             <div class="averageMiles">
+               <label for="milesPerGallon">How many miles do you travel per week?</label>
+               <input id="miles" class="form-control" placeholder="enter your miles/week here" type="number" min="0">
+             </div>
+             <br>
+             <label name="recycling" for="recycling">Which of these do you recycle?</label>
+               <div class="checkbox">
+                 <label>
+                   <input type="checkbox" name="recycling" value="72.5">
+                   aluminum/steel
+                 </label>
+                 <label>
+                   <input type="checkbox" name="recycling" value="72.5">
+                   plastic
+                 </label>
+                 <label>
+                   <input type="checkbox" name="recycling" value="72.5">
+                   glass
+                 </label>
+                 <label>
+                   <input type="checkbox" name="recycling" value="72.5">
+                   papers and magazines
+                 </label>
+               </div>
+               <br>
+               <label name="foodConsumption" for="foodConsumption">Which of these food items do you regularly consume?</label>
+                 <div class="checkbox">
+                   <label>
+                     <input type="checkbox" name="food" value="86.44">
+                     lamb
+                   </label><br>
+                   <label>
+                     <input type="checkbox" name="food" value="59.44">
+                     beef
+                   </label><br>
+                   <label>
+                     <input type="checkbox" name="food" value="29.77">
+                     cheese
+                   </label><br>
+                   <label>
+                     <input type="checkbox" name="food" value="26.68">
+                     pork
+                   </label><br>
+                   <label>
+                     <input type="checkbox" name="food" value="24">
+                     turkey
+                   </label><br>
+                   <label>
+                     <input type="checkbox" name="food" value="15.21">
+                     chicken
+                   </label><br>
+                   <label>
+                     <input type="checkbox" name="food" value="13.45">
+                     tuna
+                   </label><br>
+                   <label>
+                     <input type="checkbox" name="food" value="10.58">
+                     eggs
+                   </label><br>
+                   <label>
+                     <input type="checkbox" name="food" value="6.39">
+                     potatoes
+                   </label><br>
+                   <label>
+                     <input type="checkbox" name="food" value="5.95">
+                     rice
+                   </label><br>
+                   <label>
+                     <input type="checkbox" name="food" value="5.07">
+                     nuts
+                   </label><br>
+                   <label>
+                     <input type="checkbox" name="food" value="4.41">
+                     beans/tofu
+                   </label><br>
+                   <label>
+                     <input type="checkbox" name="food" value="4.41">
+                     vegetables
+                   </label><br>
+                   <label>
+                     <input type="checkbox" name="food" value="4.19">
+                     milk
+                   </label><br>
+                   <label>
+                     <input type="checkbox" name="food" value="2.43">
+                     fruit
+                   </label><br>
+                   <label>
+                     <input type="checkbox" name="food" value="1.99">
+                     lentils
+                   </label><br>
+                 </div>
+
+
+             <button type="submit" class="btn btn-success" name="button">Estimate!</button>
+           </form>
+           <div class="results">
+             <p>
+               You are responsible for emitting <span id="finalTotal"></span> lbs of CO<sub>2</sub> per month!
+             </p>
+             <p id="lower">
+               Your emissions are <b>below average</b> for an American! Good work, but it's still important to consider how you can cut down even further and how you can make a larger impact. Now <b>copy your result and paste it into our t-test calculator</b> so we can compare results between cohorts!
+             </p>
+             <p id="higher">
+               Oh no! Your emissions are <b>higher than average</b> for an American! Try seeing what steps you can take to reduce your emissions. Now <b>copy your result and paste it into our t-test calculator</b> so we can compare results between cohorts!
+             </p>
+
+           </div>
+         </div>
+       </div>
+     </div> <!--end of homecontainer-->
+   </div>

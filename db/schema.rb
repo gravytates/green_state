@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170903025316) do
+ActiveRecord::Schema.define(version: 20170903212911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,31 @@ ActiveRecord::Schema.define(version: 20170903025316) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "nat_gas"
+    t.integer "fuel_oil"
+    t.integer "electricity"
+    t.string "mode"
+    t.integer "miles"
+    t.boolean "alum_re"
+    t.boolean "plactic_re"
+    t.boolean "glass_re"
+    t.boolean "paper_re"
+    t.integer "lamb"
+    t.integer "beef"
+    t.integer "cheese"
+    t.integer "pork"
+    t.integer "turkey"
+    t.integer "chicken"
+    t.integer "tuna"
+    t.integer "eggs"
+    t.integer "potatoes"
+    t.integer "rice"
+    t.integer "nuts"
+    t.integer "beans"
+    t.integer "vegetables"
+    t.integer "milk"
+    t.integer "fruit"
+    t.integer "lentils"
   end
 
   create_table "invasive_species_removal", force: :cascade do |t|
