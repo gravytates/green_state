@@ -25,21 +25,22 @@ class Co2Estimate < ApplicationRecord
 
     modeTotal = (modeEfficiency * self.miles * 4.33)
 
+    oil_electric_total = ((self.fuel_oil * 7.59) + (self.electricity * 10.55))
+
+    if self.nat_gas <= 9.6
+      nat_gas_total = 0
+    else
+      nat_gas_total = (self.nat_gas - 9.5) * 8.85
+    end
+
+    homeTotal = oil_electric_total + nat_gas_total
     # let modeTotal
 
-    return modeTotal
+    return (modeTotal + homeTotal)
   end
 end
 
-#
-#
-# //Prototype for Mode of Transportation//
-# Economic.prototype.modeCarbonTotal = function(mode, miles) {
-#   var transportProduct = this.mode * this.miles;
-#   console.log("trans: " + transportProduct);
-#   return (transportProduct * 4.33);
-# }
-#
+
 # Economic.prototype.homeCarbonTotal = function(electric) {
 #   var electricEnergyProduct = this.electric * 10.55;
 #   if (this.natGas <= 9.5) {this.natGas = 9.5};
