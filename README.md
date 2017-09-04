@@ -1,6 +1,8 @@
 # _Green State_
 
 
+![landing](https://user-images.githubusercontent.com/25161777/30040060-a9519da4-918e-11e7-848a-3f044655d678.png)
+
 [Visit the Site!](https://green-state.herokuapp.com/)
 
 Green State, a great way to compete across Northwest state lines for ecological benefit and bragging rights! This rails site was built over Labor day weekend 2017 as an effort to demonstrate a snap shot of my environmental science, database management, data analysis, and programming proficiencies.
@@ -71,13 +73,21 @@ This application includes both Unit and User Integration testing.  It primarily 
 
 ### Landing
 
-### Estimator
+![landing](https://user-images.githubusercontent.com/25161777/30040060-a9519da4-918e-11e7-848a-3f044655d678.png)
 
 ### Data
 
+![quiz](https://user-images.githubusercontent.com/25161777/30040063-b0eec12c-918e-11e7-90e4-2ff37ec8bbb2.png)
+
 ### Analysis
 
+![data1](https://user-images.githubusercontent.com/25161777/30040065-b7fea9b4-918e-11e7-824a-2afdc1f5064f.png)
+
+![data2](https://user-images.githubusercontent.com/25161777/30040067-b80148c2-918e-11e7-9baa-31adbd4f6ed7.png)
+
 ### Profile
+
+![profile](https://user-images.githubusercontent.com/25161777/30040066-b7ff3050-918e-11e7-91ee-8a5eaa5f9ebc.png)
 
 ### Test Coverage
 
