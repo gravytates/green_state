@@ -34,23 +34,26 @@ class Co2Estimate < ApplicationRecord
     end
 
     homeTotal = oil_electric_total + nat_gas_total
-    # let modeTotal
 
-    return (modeTotal + homeTotal)
+    wasteProduct = 692
+    if self.alum_re == 'yes'
+      wasteProduct - 72.5
+    end
+    if self.plastic_re == 'yes'
+      wasteProduct - 72.5
+    end
+    if self.paper_re == 'yes'
+      wasteProduct - 72.5
+    end
+    totalWaste = wasteProduct/12.0
+
+
+    return (modeTotal + homeTotal + totalWaste)
   end
 end
 
 
-# Economic.prototype.homeCarbonTotal = function(electric) {
-#   var electricEnergyProduct = this.electric * 10.55;
-#   if (this.natGas <= 9.5) {this.natGas = 9.5};
-#   var natGasProduct = (this.natGas - 9.5) * 8.85;
-#   var fuelProduct = this.fuel * 7.59;
-#   var homeEnergyProduct = electricEnergyProduct + natGasProduct + fuelProduct;
-#   console.log("home: " + homeEnergyProduct);
-#   return homeEnergyProduct;
-# }
-#
+# 72.5
 # // this works as of 10am 4/11
 # Economic.prototype.recyclingTotal = function() {
 #   var wasteProduct = 692;
@@ -76,43 +79,3 @@ end
 #   return bigResult.toFixed(2);
 # }
 #
-# //*--User Interface--*//
-# $(document).ready(function() {
-#   $("#input").submit(function(e) {
-#     e.preventDefault();
-#     var recycleNFood = new Economic();
-#     var inputtedMode = $("#mode").val();
-#     var inputtedMiles = $("#miles").val();
-#     var inputtedElectric = $("#electricity").val();
-#     var inputtedNatGas = $("#natgas").val();
-#     var inputtedFuel = $("#fuel").val();
-#     var getCarbonTotal = new Economic(inputtedMode, inputtedMiles, inputtedElectric, inputtedNatGas, inputtedFuel);
-#     $("input:checkbox[name=recycling]:checked").each(function(){
-#         let inputtedRecycling = parseFloat($(this).val());
-#         getCarbonTotal.recyclingArray.push(inputtedRecycling);
-#     });
-#     $("input:checkbox[name=food]:checked").each(function(){
-#       let inputtedFood = parseFloat($(this).val());
-#       getCarbonTotal.foodArray.push(inputtedFood);
-#     });
-#
-#     getCarbonTotal.modeCarbonTotal();
-#     getCarbonTotal.homeCarbonTotal();
-#     recycleNFood.foodTotal();
-#     finalResult = getCarbonTotal.overallTotal(inputtedMode, inputtedMiles, inputtedElectric, inputtedNatGas, inputtedFuel);
-#     $("#finalTotal").html(finalResult);
-#     $(".results").show();
-#
-#     if (finalResult >= 958.3) {
-#       $("#higher").show();
-#       $("#lower").hide();
-#     } else {
-#       $("#lower").show();
-#       $("#higher").hide();
-#     }
-#
-#     console.log("final total: " + finalResult);
-#     console.log(getCarbonTotal.modeCarbonTotal());
-#     console.log(getCarbonTotal.homeCarbonTotal());
-#   });
-# });
