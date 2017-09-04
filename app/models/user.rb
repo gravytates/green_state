@@ -4,5 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-    has_many :co2_estimates       
+  has_many :co2_estimates
+
+  scope :alphabetical, -> { order(name: :asc) }
+  scope :state, -> { order(name: :asc) }      
 end

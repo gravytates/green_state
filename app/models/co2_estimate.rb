@@ -1,6 +1,9 @@
 class Co2Estimate < ApplicationRecord
   belongs_to :user
 
+  scope :highest, -> { order(monthly_emittance: :desc) }
+  scope :lowest, -> { order(monthly_emittance: :asc) }
+
   def exam_math(params)
 
     if self.mode === 'walk'

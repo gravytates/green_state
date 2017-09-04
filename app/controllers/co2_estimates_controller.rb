@@ -5,7 +5,18 @@ class Co2EstimatesController  < ApplicationController
 
 
   def index
-    @co2_estimates = Co2Estimate.all
+
+    @filter_type = params[:sort_by]
+    # binding.pry
+    if params[:sort_by] == nil
+      @co2_estimates = Co2Estimate.lowest
+    else
+      @co2_estimates = Co2Estimate.send(params[:sort_by])
+      if Co2Estimate.send(params[:sort_by]) == []
+        flash[:alert] = "No results returned. Choose another filter!"
+      end
+    end
+
   end
 
   def new

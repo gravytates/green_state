@@ -1,5 +1,12 @@
 <h1>Check out the data</h1>
 
+<% if @filter_type != nil%>
+  <h3 id="about">Sorted by <em><%= @filter_type %></em></h3>
+<% end %>
+
+<%= link_to "Lowest", :sort_by => 'lowest' %> |
+<%= link_to "Highest", :sort_by => 'highest' %> |
+
 <% if current_user %>
   <h5><%= link_to "Take the Carbon Emittance Quiz!", new_co2_estimate_path %></h5>
   <hr>
@@ -18,7 +25,7 @@
       <% @co2_estimates.each do |est| %>
         <tr>
           <td><h4><em><%= est.user.name %></em></h4></td>
-          <td><%= est.user.state %></d> 
+          <td><%= est.user.state %></d>
           <td><%= est.monthly_emittance %></td>
         </tr>
       <% end %>
