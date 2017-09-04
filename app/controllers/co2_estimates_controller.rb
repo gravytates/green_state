@@ -47,6 +47,9 @@ class Co2EstimatesController  < ApplicationController
     @co2_estimates = Co2Estimate.all
   end
 
+  def methods
+  end
+
 private
   def co2_estimate_params
     params.require(:co2_estimate).permit(

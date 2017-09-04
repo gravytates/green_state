@@ -1,5 +1,6 @@
 <% if current_user %>
-<h1><%= link_to "Take the Carbon Emittance Quiz!", new_co2_estimate_path %></h1>
+<h1 id='title'>Take the Carbon Emittance Estimation Quiz!</h1>
+<%= link_to "Quiz", new_co2_estimate_path, class: 'btn btn-default' %> <%= link_to "Methods", methods_path, class: 'btn btn-default' %>
 <hr>
 <% end %>
 
