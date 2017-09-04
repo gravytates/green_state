@@ -10,8 +10,8 @@ class Co2Estimate < ApplicationRecord
   scope :reverse_alpha, ->  { joins(:user).merge(User.order(name: :desc)) }
   scope :highest, -> { order(monthly_emittance: :desc) }
   scope :lowest, -> { order(monthly_emittance: :asc) }
-  scope :newest, -> { order(created_at: :asc) }
-  scope :oldest, -> { order(created_at: :desc) }
+  scope :newest, -> { order(created_at: :desc) }
+  scope :oldest, -> { order(created_at: :asc) }
 
   scope :oregon, -> { joins(:user).merge(User.where(state: "Oregon")) }
   scope :washington, -> { joins(:user).merge(User.where(state: "Washington")) }

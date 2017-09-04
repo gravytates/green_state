@@ -2,7 +2,7 @@
 
 <div class="well">
   <p>
-  The null hypothesis is that the two averages are similar (data is within 95% normal distribution). If the null hypothesis is rejected, this means the two samples are statistically different. One big assumption to be made with t-tests are that the variances are equal (roughly equated to standard deviations), so the p value for both equal variance scenarios is included.
+  We'll look at our data through charts and a t-test. The null hypothesis is that the two averages are similar (data is within 95% normal distribution). If the null hypothesis is rejected, this means the two samples are statistically different. An important assumption to be made with t-tests are that the variances are equal (roughly equated to standard deviations), so the p value for both equal variance scenarios is included.
 </p>
 <p>
   The t-test equation:
@@ -26,6 +26,7 @@
       <p>Probability with non-equal variance: <%= @co2_estimates.p_value[1] %></p>
   </div>
 </div>
+
 <div class="row">
   <div class="col-md-6">
     <h3>Washington</h3>
@@ -40,7 +41,8 @@
       <p>Standard Deviation: <%= @oregon.standard_dev %></p>
   </div>
 </div>
-    <hr>
+
+<hr>
 <div class="row">
   <div class="col-md-12">
     <h4>Average Emittance between States</h4>
@@ -48,12 +50,18 @@
   </div>
   <div class="col-md-12">
     <hr>
-  </div>
+
     <h4>Emittance between states over time</h4>
     <%= line_chart [
           {name: "Oregon", data: @oregon.map{|t| [t.user_id, t.monthly_emittance] }},
           {name: "Washington", data: @washington.map{|t| [t.user_id, t.monthly_emittance] }}], discrete: false, xtitle: "Time of Quiz Result", ytitle: "Emittance (CO2 lbs/mo)", curve: true %>
-
   </div>
-  <br>
 </div>
+
+<br>
+<div class="well">
+  <h3>Lessons Learned</h3>
+  <p>Washington users appear to emit much more carbon dioxide than Oregon users. Of course these results are attributed to how the database is originally seeded. Upon set up, each user is assigned a monthly emittance like so: <i>sequence(:monthly_emittance) {|n| n * (Faker::Number.between(70, 500)) }</i> </p>
+  <p>Because Oregon users were seeded first, their user id's ('n' in the build sequence) had lower numbers (1-100), meaning their potential range would be much lower than Washington users who were seeded by id's 101-200.</p>
+</div>
+<br>
