@@ -1,4 +1,9 @@
-<h1>Check out the data</h1>
+<% if current_user %>
+<h1><%= link_to "Take the Carbon Emittance Quiz!", new_co2_estimate_path %></h1>
+<hr>
+<% end %>
+
+<h1>Raw Data Overview</h1>
 
 <% if @filter_type != nil%>
   <h3 id="about">Sorted by <em><%= @filter_type %></em></h3>
@@ -12,10 +17,6 @@
 <%= link_to "Oldest", :sort_by => 'oldest' %>
 
 
-<% if current_user %>
-  <h5><%= link_to "Take the Carbon Emittance Quiz!", new_co2_estimate_path %></h5>
-  <hr>
-<% end %>
 
 <table class="table">
     <thead>

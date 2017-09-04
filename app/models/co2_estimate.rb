@@ -8,6 +8,9 @@ class Co2Estimate < ApplicationRecord
   scope :newest, -> { order(created_at: :asc) }
   scope :oldest, -> { order(created_at: :desc) }
 
+  scope :oregon, -> { joins(:user).merge(User.where(state: "Oregon")) }
+  scope :washington, -> { joins(:user).merge(User.where(state: "Washington")) }
+
 
   def exam_math(params)
 
@@ -62,5 +65,9 @@ class Co2Estimate < ApplicationRecord
 
 
     return (modeTotal + homeTotal + totalWaste + foodTotal)
+  end
+
+  def self.average_rating
+    self.average(:monthly_emittance).round(1)
   end
 end

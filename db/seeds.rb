@@ -18,8 +18,6 @@ end
   users.push(FactoryGirl.create(:washington_user))
 end
 
-
-
 users.each do |user|
   estimate = FactoryGirl.create(:co2_estimate)
   user.co2_estimates.push(estimate)

@@ -1,9 +1,4 @@
 class Co2EstimatesController  < ApplicationController
-
-  # after_action :only => [:create, :edit] { self.update(:monthly_emittance =>
-  #   self.exam_math) }
-
-
   def index
 
     @filter_type = params[:sort_by]
@@ -44,7 +39,12 @@ class Co2EstimatesController  < ApplicationController
       flash[:notice] = "Estimate successfully removed!"
       redirect_to user_path(current_user)
     end
-end
+  end
+
+  def data
+    @oregon = Co2Estimate.oregon
+    @washington = Co2Estimate.washington
+  end
 
 private
   def co2_estimate_params
