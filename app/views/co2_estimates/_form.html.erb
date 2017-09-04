@@ -18,7 +18,7 @@
         <%= f.number_field :electricity, min: 0 %><br><br>
 
         <p><%= f.label :mode, "What is your primary mode of transportation?" %></p>
-        <%= f.select :mode, ['...', 'walk', 'bicycle', 'MAX', 'MMO', 'bus', 'truck (older than 2016)', 'small pickup', 'standard pickup', 'hybrid', 'sedan'] %><br><br>
+        <%= f.select :mode, ['...', 'walk', 'bicycle', 'MAX', 'bus', 'truck (older than 2016)', 'small pickup', 'standard pickup', 'hybrid', 'sedan'] %><br><br>
 
         <p><%= f.label :miles, "On average, how many miles do you travel per week?"%></p>
         <%= f.number_field :miles, min: 0 %><br><br>

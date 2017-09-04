@@ -9,36 +9,29 @@ class Co2Estimate < ApplicationRecord
       modeEfficiency = 0
     elsif self.mode === 'MAX'
       modeEfficiency = 0.36
-    else self.mode === 'bus'
-      modeEfficiency = 1
+    elsif self.mode === 'bus'
+      modeEfficiency = 0.56
+    elsif self.mode === 'truck (older than 2016)'
+      modeEfficiency = 1.32
+    elsif self.mode === 'small pickup'
+      modeEfficiency = 0.94
+    elsif self.mode === 'standard pickup'
+      modeEfficiency = 1.1
+    elsif self.mode === 'hybrid'
+      modeEfficiency = 0.39
+    else self.mode === 'sedan'
+      modeEfficiency = 0.84
     end
+
+    modeTotal = (modeEfficiency * self.miles * 4.33)
 
     # let modeTotal
 
-    return modeEfficiency
+    return modeTotal
   end
 end
 
-
-# function Economic(mode, miles, electric, natGas, fuel, wasteProduct) {
-#   this.mode = mode;
-#   this.miles = miles;
-#   this.electric = electric;
-#   this.natGas = natGas;
-#   this.fuel = fuel;
-#   this.recyclingArray = [];
-#   this.foodArray = [];
-#   this.wasteProduct = wasteProduct;
-# }
-# <option value="0">walk</option>
-# <option value="0">bike</option>
-# <option value=".36">the MAX</option>
-# <option value=".56">bus</option>
-# <option value="1.32">truck (older than 2016)</option>
-# <option value=".94">small pickup</option>
-# <option value="1.1">standard pickup</option>
-# <option value=".39">hybrid</option>
-# <option value=".84">sedan</option>
+#
 #
 # //Prototype for Mode of Transportation//
 # Economic.prototype.modeCarbonTotal = function(mode, miles) {
