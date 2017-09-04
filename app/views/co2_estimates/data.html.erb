@@ -23,14 +23,19 @@
       <p>Standard Deviation: <%= @oregon.standard_dev %></p>
   </div>
 </div>
+    <hr>
 <div class="row">
   <div class="col-md-12">
-
+    <h4>Average Emittance between States</h4>
     <%= column_chart Co2Estimate.joins(:user).merge(User.group(:state)).average(:monthly_emittance) %>
-
+  </div>
+  <div class="col-md-12">
+    <hr>
+  </div>
+    <h4>Emittance between states over time</h4>
     <%= line_chart [
           {name: "Oregon", data: @oregon.map{|t| [t.user_id, t.monthly_emittance] }},
-          {name: "Washington", data: @washington.map{|t| [t.user_id, t.monthly_emittance] }}] %>
+          {name: "Washington", data: @washington.map{|t| [t.user_id, t.monthly_emittance] }}], discrete: false, xtitle: "Time of Quiz Result", ytitle: "Emittance (CO2 lbs/mo)", curve: true %>
 
   </div>
 </div>
