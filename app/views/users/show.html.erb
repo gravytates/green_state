@@ -23,9 +23,9 @@
         </h4>
 
           <% if  estimate.monthly_emittance < 958.3 %>
-            Your emissions are <b>below average</b> for an American! Good work, but it's still important to consider how you can cut down even further and how you can make a larger impact.
+            These emissions are <b>below average</b> for an American! Good work, but it's still important to consider how you can cut down even further and how you can make a larger impact.
           <% else %>
-            Oh no! Your emissions are <b>higher than average</b> for an American! Try seeing what steps you can take to reduce your emissions.
+            Oh no! These emissions are <b>higher than average</b> for an American! Try seeing what steps you can take to reduce your emissions.
           <% end %>
           <br>
         <%= link_to "Delete Estimate", co2_estimate_path(estimate),

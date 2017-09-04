@@ -1,8 +1,25 @@
 <h1>Looking at the Data... How Green are these States?</h1>
 
+<div class="well">
+  <p>
+  The null hypothesis is that the two averages are similar (data is within 95% normal distribution). If the null hypothesis is rejected, this means the two samples are statistically different. One big assumption to be made with t-tests are that the variances are equal (roughly equated to standard deviations), so the p value for both equal variance scenarios is included.
+</p>
+<p>
+  The t-test equation:
+</p><br>
 
+<%= image_tag("ttest.gif", alt: "t-test equation") %><br><br>
+
+<p>
+  Where X-bar = average emission, s = standard deviation, n = sample size. Standard deviation is calculated using:
+</p>
+
+<%= image_tag("sd.png", alt: "standard deviation equation") %><br>
+
+</div>
 <div class="row">
   <div class="col-md-12">
+      <h3>Current Results (will update as more results are produced/deleted):</h3>
       <p>T-value: <%= @co2_estimates.t_value %></p>
       <p>Degrees of Freedom: <%= @co2_estimates.deg_freedom %></p>
       <p>Probability with equal variance: <%= @co2_estimates.p_value[0] %></p>
@@ -27,7 +44,7 @@
 <div class="row">
   <div class="col-md-12">
     <h4>Average Emittance between States</h4>
-    <%= column_chart Co2Estimate.joins(:user).merge(User.group(:state)).average(:monthly_emittance) %>
+    <%= column_chart Co2Estimate.joins(:user).merge(User.group(:state)).average(:monthly_emittance), ytitle: "Emittance (CO2 lbs/mo)" %>
   </div>
   <div class="col-md-12">
     <hr>
@@ -38,4 +55,5 @@
           {name: "Washington", data: @washington.map{|t| [t.user_id, t.monthly_emittance] }}], discrete: false, xtitle: "Time of Quiz Result", ytitle: "Emittance (CO2 lbs/mo)", curve: true %>
 
   </div>
+  <br>
 </div>

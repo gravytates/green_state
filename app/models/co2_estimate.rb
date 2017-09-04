@@ -121,16 +121,21 @@ class Co2Estimate < ApplicationRecord
     o = Daru::Vector.new(o_data)
     w = Daru::Vector.new(w_data)
     t_2=Statsample::Test::T::TwoSamplesIndependent.new(o, w)
-    if t_2.probability_equal_variance < 0.000001
-      p_with_equal_variance = '< 0.000001'
+    if t_2.probability_equal_variance < 0.05 && t_2.probability_equal_variance > 0.000001
+      p_with_equal_variance = '< 0.05 There is a statistically significant difference between states!'
+    elsif t_2.probability_equal_variance <= 0.000001
+      p_with_equal_variance = '< 0.000001 There is a strongly significant difference between states!'
     else
-      p_with_equal_variance = t_2.probability_equal_variance
+      p_with_equal_variance = "#{t_2.probability_equal_variance} There is no statistically significant difference between states."
     end
 
-    if t_2.probability_not_equal_variance < 0.000001
-      p_with_equal_non_variance = '< 0.000001'
+
+    if t_2.probability_not_equal_variance < 0.05 && t_2.probability_not_equal_variance > 0.000001
+      p_with_equal_non_variance = '< 0.05 There is a statistically significant difference between states!'
+    elsif t_2.probability_not_equal_variance <= 0.000001
+      p_with_equal_non_variance = '< 0.000001 There is a strongly significant difference between states!'
     else
-      p_with_equal_non_variance = t_2.probability_not_equal_variance
+      p_with_equal_non_variance = "#{t_2.probability_not_equal_variance} There is no statistically significant difference between states."
     end
     return [p_with_equal_variance, p_with_equal_non_variance]
   end
