@@ -1,24 +1,116 @@
-# README
+# _Green State_
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+[Visit the Site!](https://green-state.herokuapp.com/)
 
-* Ruby version
+Green State, a great way to compete across Northwest state lines for ecological benefit and bragging rights! This rails site was built over Labor day weekend 2017 as an effort to demonstrate a snap shot of my environmental science, database management, data analysis, and programming proficiencies. Sign up and take the quiz to estimate your monthly carbon dioxide emittance. Then check out how your data stacks up against others individually, or collectively in the data page. See how states compare graphically and statistically through chartkick graphing and an integrated t-test tied to the database for dynamic analysis. T-score calculated manually, and the statsample library provides the calculus to find p-values. Seeded with the faker gem, these results aren't reflective of real live users, but it gives a great simulation of how this filled data-base would look like and operate.
 
-* System dependencies
+Enjoy!
 
-* Configuration
+## Prerequisites
 
-* Database creation
+Web browser with ES6 compatibility
+Examples: Chrome, Safari
 
-* Database initialization
+### Installing
 
-* How to run the test suite
+Clone this repo by typing into the terminal:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ git clone https://github.com/gravytates/green_state.git
+```
 
-* Deployment instructions
+In a new terminal window, start postgres in the background:
+```
+$ postgres
+```
+Ensure you are using Ruby 2.4.1 by typing:
+```
+$ ruby -v
+```
 
-* ...
+If you are not running version 2.4.1 please look into a Ruby version manager. I suggest RVM or Chruby.
+
+Navigate to this project directory in the terminal. Then type:
+
+```
+$ bundle install
+```
+
+After the gems are installed set up the database:
+
+```
+$ bundle exec rails db:setup
+```
+
+To run the app:
+```
+$ bundle exec rails server
+```
+If all went well, rails will now make this project available in your browser by going to localhost:3000.
+
+Sign up with your own secured account or log in with one of the seed accounts with the provided credentials:
+```
+email: operson_1@example.com
+```
+```
+password: 123456
+```
+
+### Testing
+
+This application includes both Unit and User Integration testing.  It primarily uses RSpec, Capybara, and Shoulda-Matchers.
+
+## Screenshots
+
+### Landing
+
+### Estimator
+
+### Data
+
+### Analysis
+
+### Profile
+
+### Test Coverage
+
+## Authors
+
+* Grady Shelton
+
+### Technologies Used
+
+* Ruby
+* Rails
+* Bundler
+* Postgres
+* RSpec
+* Javascript (ES6)
+* Jquery 3
+* HTML5
+* SASS
+* FactoryGirl
+* devise
+* SimpleCov
+* Statsample
+* Chartkick
+
+## License
+
+MIT License
+
+Copyright (c) 2017 Grady Shelton
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
