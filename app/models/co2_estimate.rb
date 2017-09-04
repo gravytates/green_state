@@ -56,10 +56,3 @@ class Co2Estimate < ApplicationRecord
     return (modeTotal + homeTotal + totalWaste + foodTotal)
   end
 end
-
-#
-# Economic.prototype.overallTotal = function(mode, miles, electric, natGas, fuel, recyclingArray, foodArray) {
-#   var bigResult = this.modeCarbonTotal(mode, miles) + this.homeCarbonTotal(electric, natGas, fuel) + this.recyclingTotal(recyclingArray) + this.foodTotal(foodArray);
-#   return bigResult.toFixed(2);
-# }
-#

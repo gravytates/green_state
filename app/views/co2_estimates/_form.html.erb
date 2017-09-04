@@ -4,8 +4,6 @@
 <div class="row">
   <div class="container">
     <div class="well">
-      <h2>Take the CO<sub>2</sub> Quiz!</h2>
-      <br>
       <%= form_for @co2_estimate do |f| %>
 
         <p><%= f.label :nat_gas, "On average, how much do you pay per month for natural gas?"%></p>
@@ -38,7 +36,7 @@
         <p><%= f.label :paper_re, "paper?" %></p>
         <%= f.select :paper_re, ['no', 'yes', ] %><br><br>
 
-        <p>On average, how much would you estimate you eat each of the following foods per month in <b>pounds?</b></p>
+        <p>On average, how much do you consume each of the following foods per month in <b>pounds?</b></p>
 
         <p><%= f.label :lamb, "lamb?"%></p>
         <%= f.number_field :lamb, min: 0, value: 0 %><br><br>
