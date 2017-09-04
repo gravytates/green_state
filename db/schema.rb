@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170904003036) do
+ActiveRecord::Schema.define(version: 20170904011241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,9 +25,9 @@ ActiveRecord::Schema.define(version: 20170904003036) do
     t.decimal "electricity", precision: 12, scale: 2
     t.string "mode"
     t.integer "miles"
-    t.boolean "alum_re"
-    t.boolean "glass_re"
-    t.boolean "paper_re"
+    t.string "alum_re"
+    t.string "glass_re"
+    t.string "paper_re"
     t.decimal "lamb", precision: 12, scale: 2
     t.decimal "beef", precision: 12, scale: 2
     t.decimal "cheese", precision: 12, scale: 2
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20170904003036) do
     t.decimal "milk", precision: 12, scale: 2
     t.decimal "fruit", precision: 12, scale: 2
     t.decimal "lentils", precision: 12, scale: 2
-    t.boolean "plastic_re"
+    t.string "plastic_re"
   end
 
   create_table "invasive_species_removal", force: :cascade do |t|

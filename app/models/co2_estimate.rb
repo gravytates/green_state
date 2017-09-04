@@ -37,18 +37,21 @@ class Co2Estimate < ApplicationRecord
 
     wasteProduct = 692
     if self.alum_re == 'yes'
-      wasteProduct - 72.5
+      wasteProduct -= 72.5
     end
     if self.plastic_re == 'yes'
-      wasteProduct - 72.5
+      wasteProduct -= 72.5
+    end
+    if self.glass_re == 'yes'
+      wasteProduct -= 72.5
     end
     if self.paper_re == 'yes'
-      wasteProduct - 72.5
+      wasteProduct -= 72.5
     end
     totalWaste = wasteProduct/12.0
 
 
-    return (modeTotal + homeTotal + totalWaste)
+    return (modeTotal + homeTotal + wasteProduct)
   end
 end
 
