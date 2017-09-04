@@ -3,7 +3,11 @@
 
 [Visit the Site!](https://green-state.herokuapp.com/)
 
-Green State, a great way to compete across Northwest state lines for ecological benefit and bragging rights! This rails site was built over Labor day weekend 2017 as an effort to demonstrate a snap shot of my environmental science, database management, data analysis, and programming proficiencies. Sign up and take the quiz to estimate your monthly carbon dioxide emittance. Then check out how your data stacks up against others individually, or collectively in the data page. See how states compare graphically and statistically through chartkick graphing and an integrated t-test tied to the database for dynamic analysis. T-score calculated manually, and the statsample library provides the calculus to find p-values. Seeded with the faker gem, these results aren't reflective of real live users, but it gives a great simulation of how this filled data-base would look like and operate.
+Green State, a great way to compete across Northwest state lines for ecological benefit and bragging rights! This rails site was built over Labor day weekend 2017 as an effort to demonstrate a snap shot of my environmental science, database management, data analysis, and programming proficiencies.
+
+Sign up and take the quiz to estimate your monthly carbon dioxide emittance. Then check out how your data stacks up against others individually, or collectively in the data page. See how states compare graphically and statistically through chartkick graphing and an integrated t-test tied to the database for dynamic analysis. T-score calculated manually, and the statsample library provides the calculus to find p-values.
+
+Seeded with the faker gem, these results aren't reflective of real live users, but they give a great simulation of how this filled data-base would look like and operate.
 
 Enjoy!
 
