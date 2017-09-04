@@ -1,7 +1,16 @@
 <h1>Looking at the Data... How Green are these States?</h1>
 
+
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-12">
+      <p>T-value: <%= @co2_estimates.t_value %></p>
+      <p>Degrees of Freedom: <%= @co2_estimates.deg_freedom %></p>
+      <p>Probability with equal variance: <%= @co2_estimates.p_value[0] %></p>
+      <p>Probability with non-equal variance: <%= @co2_estimates.p_value[1] %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
     <h3>Washington</h3>
     <p>Average Estimated Emittance: <%= @washington.average_emittance %> lbs CO<sub>2</sub>/mo</p>
     <p>Total Records (n): <%= @washington.count %></p>
@@ -21,12 +30,7 @@
       </tbody>
     </table>
   </div>
-  <div class="col-md-4">
-    <p>T-value: <%= @co2_estimates.t_value %></p>
-  </div>
-
-
-  <div class="col-md-4">
+  <div class="col-md-6">
     <h3>Oregon</h3>
       <p>Average Estimated Emittance: <%= @oregon.average_emittance %> lbs CO<sub>2</sub>/mo</p>
       <p>Total Records (n): <%= @oregon.count %></p>

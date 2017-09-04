@@ -1,4 +1,9 @@
 class Co2Estimate < ApplicationRecord
+  include Statsample::Test
+  include Statsample::Summarizable
+  include Math
+
+
   belongs_to :user
 
   scope :alphabetical, ->  { joins(:user).merge(User.order(name: :asc)) }
@@ -84,19 +89,53 @@ class Co2Estimate < ApplicationRecord
   end
 
   def self.t_value
-    oregon_data = self.joins(:user).merge(User.where(state: "Oregon"))
-    washington_data = joins(:user).merge(User.where(state: "Washington"))
-    o_n = oregon_data.pluck(:monthly_emittance).count
-    w_n = washington_data.pluck(:monthly_emittance).count
-    o_st_dev = oregon_data.standard_dev
-    w_st_dev = washington_data.standard_dev
-    o_avg = oregon_data.average_emittance
-    w_avg = washington_data.average_emittance
+    oregon_rows = joins(:user).merge(User.where(state: "Oregon"))
+    washington_rows = joins(:user).merge(User.where(state: "Washington"))
+    o_n = oregon_rows.pluck(:monthly_emittance).count
+    w_n = washington_rows.pluck(:monthly_emittance).count
+    o_st_dev = oregon_rows.standard_dev
+    w_st_dev = washington_rows.standard_dev
+    o_avg = oregon_rows.average_emittance
+    w_avg = washington_rows.average_emittance
     numerator = o_avg - w_avg
     preSQRT = ((o_st_dev ** 2)/o_n) + ((w_st_dev ** 2)/w_n)
     denominator = Math.sqrt(preSQRT)
     t_value = (numerator / denominator).round(3)
+
   end
+
+  def self.p_value
+    oregon_rows = joins(:user).merge(User.where(state: "Oregon"))
+    washington_rows = joins(:user).merge(User.where(state: "Washington"))
+    o_data = oregon_rows.pluck(:monthly_emittance)
+    w_data = washington_rows.pluck(:monthly_emittance)
+    o = Daru::Vector.new(o_data)
+    w = Daru::Vector.new(w_data)
+    t_2=Statsample::Test::T::TwoSamplesIndependent.new(o, w)
+    if t_2.probability_equal_variance < 0.000001
+      p_with_equal_variance = '< 0.000001'
+    else
+      p_with_equal_variance = t_2.probability_equal_variance
+    end
+
+    if t_2.probability_not_equal_variance < 0.000001
+      p_with_equal_non_variance = '< 0.000001'
+    else
+      p_with_equal_non_variance = t_2.probability_not_equal_variance
+    end
+    return [p_with_equal_variance, p_with_equal_non_variance]
+
+  end
+
+  def self.deg_freedom
+    oregon_data = joins(:user).merge(User.where(state: "Oregon"))
+    washington_data = joins(:user).merge(User.where(state: "Washington"))
+    o_n = oregon_data.pluck(:monthly_emittance).count
+    w_n = washington_data.pluck(:monthly_emittance).count
+    return (o_n - 1) + (w_n -1)
+  end
+
+
 end
 
 #
