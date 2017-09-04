@@ -4,3 +4,23 @@
   <h5><%= link_to "Take the Carbon Emittance Quiz!", new_co2_estimate_path %></h5>
   <hr>
 <% end %>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>State</th>
+        <th>Estimated Emissions (lbs CO<sub>2</sub>/mo)</th>
+        <!-- <th>Average Rating</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <% @co2_estimates.each do |est| %>
+        <tr>
+          <td><h4><em><%= est.user.name %></em></h4></td>
+          <td><%= est.user.state %></d> 
+          <td><%= est.monthly_emittance %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
