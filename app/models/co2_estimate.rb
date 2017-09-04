@@ -101,7 +101,6 @@ class Co2Estimate < ApplicationRecord
     preSQRT = ((o_st_dev ** 2)/o_n) + ((w_st_dev ** 2)/w_n)
     denominator = Math.sqrt(preSQRT)
     t_value = (numerator / denominator).round(3)
-
   end
 
 
@@ -128,8 +127,6 @@ class Co2Estimate < ApplicationRecord
     else
       p_with_equal_variance = "#{t_2.probability_equal_variance} There is no statistically significant difference between states."
     end
-
-
     if t_2.probability_not_equal_variance < 0.05 && t_2.probability_not_equal_variance > 0.000001
       p_with_equal_non_variance = '< 0.05 There is a statistically significant difference between states!'
     elsif t_2.probability_not_equal_variance <= 0.000001
