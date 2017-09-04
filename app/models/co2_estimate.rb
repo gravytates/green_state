@@ -50,32 +50,13 @@ class Co2Estimate < ApplicationRecord
     end
     totalWaste = wasteProduct/12.0
 
+    foodTotal = ((self.lamb * 86.44) + (self.beef * 59.44) + (self.cheese * 29.77) + (self.pork * 26.68) + (self.turkey * 24) + (self.chicken * 15.21) + (self.tuna * 13.45) + (self.eggs * 10.58) + (self.potatoes * 6.39) + (self.rice * 5.95) + (self.nuts * 5.07) + (self.beans * 4.41) + (self.vegetables * 4.41) + (self.milk * 4.19) + (self.fruit * 2.43) + (self.lentils * 1.99))
 
-    return (modeTotal + homeTotal + wasteProduct)
+
+    return (modeTotal + homeTotal + totalWaste + foodTotal)
   end
 end
 
-
-# 72.5
-# // this works as of 10am 4/11
-# Economic.prototype.recyclingTotal = function() {
-#   var wasteProduct = 692;
-#   this.recyclingArray.forEach(function(recyclable) {
-#     wasteProduct -= recyclable;
-#     console.log("recycle: " + wasteProduct);
-#   });
-#   return (wasteProduct / 12);
-# };
-#
-# // this works as of 10am 4/11
-# Economic.prototype.foodTotal = function() {
-#   var foodProduct = 0;
-#   this.foodArray.forEach(function(item) {
-#     foodProduct += item;
-#     console.log("food: " + typeof foodProduct);
-#   });
-#   return foodProduct;
-# };
 #
 # Economic.prototype.overallTotal = function(mode, miles, electric, natGas, fuel, recyclingArray, foodArray) {
 #   var bigResult = this.modeCarbonTotal(mode, miles) + this.homeCarbonTotal(electric, natGas, fuel) + this.recyclingTotal(recyclingArray) + this.foodTotal(foodArray);
