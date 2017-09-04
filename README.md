@@ -74,24 +74,28 @@ This application includes both Unit and User Integration testing.  It primarily 
 ### database scopes
 
 ```
-scope :alphabetical, ->  { joins(:user).merge(User.order(name: :asc)) }
-scope :reverse_alpha, ->  { joins(:user).merge(User.order(name: :desc)) }
-scope :highest, -> { order(monthly_emittance: :desc) }
-scope :lowest, -> { order(monthly_emittance: :asc) }
-scope :newest, -> { order(created_at: :desc) }
-scope :oldest, -> { order(created_at: :asc) }
+  scope :alphabetical, ->  { joins(:user).merge(User.order(name: :asc)) }
+  scope :reverse_alpha, ->  { joins(:user).merge(User.order(name: :desc)) }
+  scope :highest, -> { order(monthly_emittance: :desc) }
+  scope :lowest, -> { order(monthly_emittance: :asc) }
+  scope :newest, -> { order(created_at: :desc) }
+  scope :oldest, -> { order(created_at: :asc) }
 
-scope :oregon, -> { joins(:user).merge(User.where(state: "Oregon")) }
-scope :washington, -> { joins(:user).merge(User.where(state: "Washington")) }
+  scope :oregon, -> { joins(:user).merge(User.where(state: "Oregon")) }
+  scope :washington, -> { joins(:user).merge(User.where(state: "Washington")) }
 ```
 
 ### t_value
 
 ```
+  ...
+
   numerator = o_avg - w_avg
   preSQRT = ((o_st_dev ** 2)/o_n) + ((w_st_dev ** 2)/w_n)
   denominator = Math.sqrt(preSQRT)
   t_value = (numerator / denominator).round(3)
+
+  ...
 
 ```
 
@@ -101,6 +105,8 @@ scope :washington, -> { joins(:user).merge(User.where(state: "Washington")) }
   t_2=Statsample::Test::T::TwoSamplesIndependent.new(o, w)
   if t_2.probability_equal_variance < 0.05 && t_2.probability_equal_variance > 0.000001
   p_with_equal_variance = '< 0.05 There is a statistically significant difference between states!'
+
+  ...
 ```
 
 ### chartkick column chart
