@@ -26,7 +26,7 @@ class Co2EstimatesController  < ApplicationController
     monthly_emittance = @co2_estimate.exam_math co2_estimate_params
     @co2_estimate.update(:monthly_emittance => monthly_emittance)
     flash[:notice] = ("Estimate successfully added! Estimated emissions: " + @co2_estimate.monthly_emittance.to_s + "lbs CO2 per month.")
-      redirect_to  co2_estimates_path
+      redirect_to user_path(current_user)
     else
       render :new
     end
