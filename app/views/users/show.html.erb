@@ -1,1 +1,40 @@
-<h3>User Profile for  <%= current_user.name %></h3>
+
+
+<div id="user_head">
+  <h1>User Profile</h1>
+  <h1>Welcome, <%= current_user.name %></h1>
+</div>
+
+<p>
+  User: <%= current_user.email %>
+</p>
+
+<%= link_to 'Edit Profile', edit_user_registration_path %>
+
+<h3>Quiz Results:</h3>
+<% if current_user.co2_estimates.any? %>
+
+  <ul>
+    <% current_user.co2_estimates.each do |estimate| %>
+      <div class="well" id="estimate">
+
+        <h4>Monthly Estimated Emittance:
+          <%= estimate.monthly_emittance %> lbs CO<sub>2</sub> / month
+        </h4>
+
+          <% if  estimate.monthly_emittance < 958.3 %>
+            Your emissions are <b>below average</b> for an American! Good work, but it's still important to consider how you can cut down even further and how you can make a larger impact.
+          <% else %>
+            Oh no! Your emissions are <b>higher than average</b> for an American! Try seeing what steps you can take to reduce your emissions.
+          <% end %>
+          <br>
+        <%= link_to "Delete Estimate", co2_estimate_path(estimate),
+                                 :data => { :method => "delete"} %>
+
+
+      </div>
+    <% end %>
+  </ul>
+<% else %>
+  <p>You haven't taken the quiz yet!</p>
+<% end %>

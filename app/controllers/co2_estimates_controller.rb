@@ -38,6 +38,14 @@ class Co2EstimatesController  < ApplicationController
     end
   end
 
+  def destroy
+    @co2_estimate = Co2Estimate.find(params[:id])
+    if @co2_estimate.destroy
+      flash[:notice] = "Estimate successfully removed!"
+      redirect_to user_path(current_user)
+    end
+end
+
 private
   def co2_estimate_params
     params.require(:co2_estimate).permit(
