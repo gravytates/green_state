@@ -10,11 +10,11 @@ User.destroy_all
 # admin = FactoryGirl.create(:admin_user)
 # User.create!(name: "Grady", admin: true, email: "adming@adming", password: "123456", state: 'Oregon' )
 users = []
-5.times do |index|
+100.times do |index|
   users.push(FactoryGirl.create(:oregon_user))
 end
 
-5.times do |index|
+100.times do |index|
   users.push(FactoryGirl.create(:washington_user))
 end
 
