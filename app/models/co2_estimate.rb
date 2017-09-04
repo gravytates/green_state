@@ -70,4 +70,101 @@ class Co2Estimate < ApplicationRecord
   def self.average_rating
     self.average(:monthly_emittance).round(1)
   end
+
+  def self.standard_dev
+    results = self.pluck(:monthly_emittance)
+    totalSum = results.sum
+    average = totalSum/results.count
+    summation = 0
+    results.each do |r|
+      summation += ((r - average).abs ** 2)
+    end
+    preSQRT = summation / (results.count - 1)
+    return Math.sqrt(preSQRT).round(2)
+  end
 end
+
+# // FIND COHORTS STANDARD DEVIATION
+# Cohort.prototype.standardDeviation = function() {
+#   var sum = 0;
+#   var avg = this.averageCarbon();
+#   this.emissions.forEach(function(student){
+#     sum += (Math.abs(student - avg) ** 2);
+#   });
+#
+#   beforeSQRT = sum / (this.emissions.length -1);
+#   stDev = Math.sqrt(beforeSQRT);
+#   return stDev;
+# }
+#
+#
+# function Statistics(){
+#   this.cohorts = [];
+# }
+#
+#
+#
+# // T-TEST FOR INTRO VS JAVASCRIPT
+# Statistics.prototype.runTTest2 = function() {
+#   var tTest = 0;
+#   var introAvg = this.cohorts[0].averageCarbon();
+#   var introSD = this.cohorts[0].standardDeviation();
+#   var introSDsq = introSD * introSD;
+#   var introN = this.cohorts[0].emissions.length;
+#   var jSAvg = this.cohorts[2].averageCarbon();
+#   var jSSD = this.cohorts[2].standardDeviation();
+#   var jSSDsq = jSSD * jSSD;
+#   var jSN = this.cohorts[2].emissions.length;
+#
+#   tTest = Math.abs(introAvg - jSAvg) / (Math.sqrt((introSDsq + jSSDsq)/jSN));
+#
+#   return tTest;
+# }
+#
+#
+#
+# // P-VALUE FOR INTRO VS JAVASCRIPT
+# Statistics.prototype.pValue2 = function(){
+#   let pValue = 0;
+#   var dF = (this.cohorts[0].emissions.length - 1) + (this.cohorts[2].emissions.length -1);
+#   var tValue = this.runTTest1();
+#   console.log(dF);
+#
+#   return dF;
+# }
+#
+#
+#
+# // COHORT CONSTRUCTOR WITH EMISSION DATA
+# function Cohort(){
+#   this.emissions = [];
+#   this.empty = [];
+# }
+#
+# // FIND COHORTS TOTAL CO2
+# Cohort.prototype.totalCarbon = function() {
+#   totalCarbon = 0;
+#   this.emissions.forEach(function(student){
+#     totalCarbon += student;
+#   });
+#   return totalCarbon;
+# }
+#
+# // FIND COHORTS AVERAGE CO2
+# Cohort.prototype.averageCarbon = function() {
+#   var average = this.totalCarbon() / this.emissions.length
+#   return average;
+# }
+#
+# // FIND COHORTS STANDARD DEVIATION
+# Cohort.prototype.standardDeviation = function() {
+#   var sum = 0;
+#   var avg = this.averageCarbon();
+#   this.emissions.forEach(function(student){
+#     sum += (Math.abs(student - avg) ** 2);
+#   });
+#
+#   beforeSQRT = sum / (this.emissions.length -1);
+#   stDev = Math.sqrt(beforeSQRT);
+#   return stDev;
+# }
