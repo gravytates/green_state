@@ -10,40 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170903220342) do
+ActiveRecord::Schema.define(version: 20170904003036) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "co2_estimates", force: :cascade do |t|
-    t.integer "monthly_emittance"
+    t.decimal "monthly_emittance", precision: 12, scale: 2
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "nat_gas"
-    t.integer "fuel_oil"
-    t.integer "electricity"
+    t.decimal "nat_gas", precision: 12, scale: 2
+    t.decimal "fuel_oil", precision: 12, scale: 2
+    t.decimal "electricity", precision: 12, scale: 2
     t.string "mode"
     t.integer "miles"
     t.boolean "alum_re"
     t.boolean "glass_re"
     t.boolean "paper_re"
-    t.integer "lamb"
-    t.integer "beef"
-    t.integer "cheese"
-    t.integer "pork"
-    t.integer "turkey"
-    t.integer "chicken"
-    t.integer "tuna"
-    t.integer "eggs"
-    t.integer "potatoes"
-    t.integer "rice"
-    t.integer "nuts"
-    t.integer "beans"
-    t.integer "vegetables"
-    t.integer "milk"
-    t.integer "fruit"
-    t.integer "lentils"
+    t.decimal "lamb", precision: 12, scale: 2
+    t.decimal "beef", precision: 12, scale: 2
+    t.decimal "cheese", precision: 12, scale: 2
+    t.decimal "pork", precision: 12, scale: 2
+    t.decimal "turkey", precision: 12, scale: 2
+    t.decimal "chicken", precision: 12, scale: 2
+    t.decimal "tuna", precision: 12, scale: 2
+    t.decimal "eggs", precision: 12, scale: 2
+    t.decimal "potatoes", precision: 12, scale: 2
+    t.decimal "rice", precision: 12, scale: 2
+    t.decimal "nuts", precision: 12, scale: 2
+    t.decimal "beans", precision: 12, scale: 2
+    t.decimal "vegetables", precision: 12, scale: 2
+    t.decimal "milk", precision: 12, scale: 2
+    t.decimal "fruit", precision: 12, scale: 2
+    t.decimal "lentils", precision: 12, scale: 2
     t.boolean "plastic_re"
   end
 
