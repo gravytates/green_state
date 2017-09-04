@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-size="10px" font-family="sans-serif" fill="none" stroke="none" stroke-width="1.5" width="400" height="300">
+     <g transform="translate(30,10)">
+          <line shape-rendering="crispEdges" x1="0" y1="270.0" x2="350" y2="270.0" stroke="rgb(0,0,0)" stroke-width="1"/>
+          <line shape-rendering="crispEdges" x1="0" y1="223.44827586206895" x2="350" y2="223.44827586206895" stroke="rgb(238,238,238)" stroke-width="1"/>
+          <line shape-rendering="crispEdges" x1="0" y1="176.8965517241379" x2="350" y2="176.8965517241379" stroke="rgb(238,238,238)" stroke-width="1"/>
+          <line shape-rendering="crispEdges" x1="0" y1="130.3448275862069" x2="350" y2="130.3448275862069" stroke="rgb(238,238,238)" stroke-width="1"/>
+          <line shape-rendering="crispEdges" x1="0" y1="83.79310344827584" x2="350" y2="83.79310344827584" stroke="rgb(238,238,238)" stroke-width="1"/>
+          <line shape-rendering="crispEdges" x1="0" y1="37.241379310344854" x2="350" y2="37.241379310344854" stroke="rgb(238,238,238)" stroke-width="1"/>
+     </g>
+     <g transform="translate(30,10)">
+          <text pointer-events="none" x="-3" dy=".35em" transform="translate(0,270.0)" fill="rgb(0,0,0)" text-anchor="end">0</text>
+          <text pointer-events="none" x="-3" dy=".35em" transform="translate(0,223.44827586206895)" fill="rgb(0,0,0)" text-anchor="end">5</text>
+          <text pointer-events="none" x="-3" dy=".35em" transform="translate(0,176.8965517241379)" fill="rgb(0,0,0)" text-anchor="end">10</text>
+          <text pointer-events="none" x="-3" dy=".35em" transform="translate(0,130.3448275862069)" fill="rgb(0,0,0)" text-anchor="end">15</text>
+          <text pointer-events="none" x="-3" dy=".35em" transform="translate(0,83.79310344827584)" fill="rgb(0,0,0)" text-anchor="end">20</text>
+          <text pointer-events="none" x="-3" dy=".35em" transform="translate(0,37.241379310344854)" fill="rgb(0,0,0)" text-anchor="end">25</text>
+     </g>
+     <g transform="translate(30,10)">
+          <line shape-rendering="crispEdges" x1="0.0" y1="270" x2="0.0" y2="275" stroke="rgb(0,0,0)" stroke-width="1"/>
+          <line shape-rendering="crispEdges" x1="43.75" y1="270" x2="43.75" y2="275" stroke="rgb(0,0,0)" stroke-width="1"/>
+          <line shape-rendering="crispEdges" x1="87.5" y1="270" x2="87.5" y2="275" stroke="rgb(0,0,0)" stroke-width="1"/>
+          <line shape-rendering="crispEdges" x1="131.25" y1="270" x2="131.25" y2="275" stroke="rgb(0,0,0)" stroke-width="1"/>
+          <line shape-rendering="crispEdges" x1="175.0" y1="270" x2="175.0" y2="275" stroke="rgb(0,0,0)" stroke-width="1"/>
+          <line shape-rendering="crispEdges" x1="218.75" y1="270" x2="218.75" y2="275" stroke="rgb(0,0,0)" stroke-width="1"/>
+          <line shape-rendering="crispEdges" x1="262.5" y1="270" x2="262.5" y2="275" stroke="rgb(0,0,0)" stroke-width="1"/>
+          <line shape-rendering="crispEdges" x1="306.25" y1="270" x2="306.25" y2="275" stroke="rgb(0,0,0)" stroke-width="1"/>
+          <line shape-rendering="crispEdges" x1="350.0" y1="270" x2="350.0" y2="275" stroke="rgb(0,0,0)" stroke-width="1"/>
+     </g>
+     <g transform="translate(30,10)">
+          <text pointer-events="none" y="3" dy=".71em" transform="translate(0.0,275)" fill="rgb(0,0,0)" text-anchor="middle">0</text>
+          <text pointer-events="none" y="3" dy=".71em" transform="translate(43.75,275)" fill="rgb(0,0,0)" text-anchor="middle">5,000</text>
+          <text pointer-events="none" y="3" dy=".71em" transform="translate(87.5,275)" fill="rgb(0,0,0)" text-anchor="middle">10,000</text>
+          <text pointer-events="none" y="3" dy=".71em" transform="translate(131.25,275)" fill="rgb(0,0,0)" text-anchor="middle">15,000</text>
+          <text pointer-events="none" y="3" dy=".71em" transform="translate(175.0,275)" fill="rgb(0,0,0)" text-anchor="middle">20,000</text>
+          <text pointer-events="none" y="3" dy=".71em" transform="translate(218.75,275)" fill="rgb(0,0,0)" text-anchor="middle">25,000</text>
+          <text pointer-events="none" y="3" dy=".71em" transform="translate(262.5,275)" fill="rgb(0,0,0)" text-anchor="middle">30,000</text>
+          <text pointer-events="none" y="3" dy=".71em" transform="translate(306.25,275)" fill="rgb(0,0,0)" text-anchor="middle">35,000</text>
+          <text pointer-events="none" y="3" dy=".71em" transform="translate(350.0,275)" fill="rgb(0,0,0)" text-anchor="middle">40,000</text>
+     </g>
+     <g transform="translate(30,10)">
+          <rect y="121.0344827586207" width="35.0" height="148.9655172413793" fill="rgb(31,119,180)" stroke="rgb(0,0,0)" stroke-width="1.0"/>
+          <rect x="35.0" width="35.0" height="270.0" fill="rgb(31,119,180)" stroke="rgb(0,0,0)" stroke-width="1.0"/>
+          <rect x="70.0" y="148.9655172413793" width="35.0" height="121.0344827586207" fill="rgb(31,119,180)" stroke="rgb(0,0,0)" stroke-width="1.0"/>
+          <rect x="105.0" y="167.58620689655174" width="35.0" height="102.41379310344827" fill="rgb(31,119,180)" stroke="rgb(0,0,0)" stroke-width="1.0"/>
+          <rect x="140.0" y="214.13793103448276" width="35.0" height="55.86206896551724" fill="rgb(31,119,180)" stroke="rgb(0,0,0)" stroke-width="1.0"/>
+          <rect x="175.0" y="158.27586206896552" width="35.0" height="111.72413793103448" fill="rgb(31,119,180)" stroke="rgb(0,0,0)" stroke-width="1.0"/>
+          <rect x="210.0" y="204.82758620689657" width="34.99999999999997" height="65.17241379310344" fill="rgb(31,119,180)" stroke="rgb(0,0,0)" stroke-width="1.0"/>
+          <rect x="244.99999999999997" y="242.0689655172414" width="35.00000000000003" height="27.93103448275862" fill="rgb(31,119,180)" stroke="rgb(0,0,0)" stroke-width="1.0"/>
+          <rect x="280.0" y="260.6896551724138" width="35.0" height="9.310344827586206" fill="rgb(31,119,180)" stroke="rgb(0,0,0)" stroke-width="1.0"/>
+          <rect x="315.0" y="251.3793103448276" width="35.0" height="18.620689655172413" fill="rgb(31,119,180)" stroke="rgb(0,0,0)" stroke-width="1.0"/>
+     </g>
+</svg>

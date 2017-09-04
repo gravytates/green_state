@@ -42,6 +42,7 @@ gem 'autoprefixer-rails'
 gem 'faker'
 gem 'factory_girl_rails'
 gem 'statsample'
+gem "chartkick"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

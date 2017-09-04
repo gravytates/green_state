@@ -104,6 +104,15 @@ class Co2Estimate < ApplicationRecord
 
   end
 
+
+  def self.deg_freedom
+    oregon_data = joins(:user).merge(User.where(state: "Oregon"))
+    washington_data = joins(:user).merge(User.where(state: "Washington"))
+    o_n = oregon_data.pluck(:monthly_emittance).count
+    w_n = washington_data.pluck(:monthly_emittance).count
+    return (o_n - 1) + (w_n -1)
+  end
+
   def self.p_value
     oregon_rows = joins(:user).merge(User.where(state: "Oregon"))
     washington_rows = joins(:user).merge(User.where(state: "Washington"))
@@ -124,47 +133,5 @@ class Co2Estimate < ApplicationRecord
       p_with_equal_non_variance = t_2.probability_not_equal_variance
     end
     return [p_with_equal_variance, p_with_equal_non_variance]
-
   end
-
-  def self.deg_freedom
-    oregon_data = joins(:user).merge(User.where(state: "Oregon"))
-    washington_data = joins(:user).merge(User.where(state: "Washington"))
-    o_n = oregon_data.pluck(:monthly_emittance).count
-    w_n = washington_data.pluck(:monthly_emittance).count
-    return (o_n - 1) + (w_n -1)
-  end
-
-
 end
-
-#
-#
-# // T-TEST FOR INTRO VS JAVASCRIPT
-# Statistics.prototype.runTTest2 = function() {
-#   var tTest = 0;
-#   var introAvg = this.cohorts[0].averageCarbon();
-#   var introSD = this.cohorts[0].standardDeviation();
-#   var introSDsq = introSD * introSD;
-#   var introN = this.cohorts[0].emissions.length;
-#   var jSAvg = this.cohorts[2].averageCarbon();
-#   var jSSD = this.cohorts[2].standardDeviation();
-#   var jSSDsq = jSSD * jSSD;
-#   var jSN = this.cohorts[2].emissions.length;
-#
-#   tTest = Math.abs(introAvg - jSAvg) / (Math.sqrt((introSDsq + jSSDsq)/jSN));
-#
-#   return tTest;
-# }
-#
-#
-#
-# // P-VALUE FOR INTRO VS JAVASCRIPT
-# Statistics.prototype.pValue2 = function(){
-#   let pValue = 0;
-#   var dF = (this.cohorts[0].emissions.length - 1) + (this.cohorts[2].emissions.length -1);
-#   var tValue = this.runTTest1();
-#   console.log(dF);
-#
-#   return dF;
-# }
