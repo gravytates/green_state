@@ -1,8 +1,8 @@
 class Co2EstimatesController  < ApplicationController
-  def index
+  skip_before_action :authenticate_user!, :only => [:index, :data, :methods]
 
+  def index
     @filter_type = params[:sort_by]
-    # binding.pry
     if params[:sort_by] == nil || params[:sort_by] == 'alphabetical'
       @co2_estimates = Co2Estimate.all
     else
@@ -11,7 +11,6 @@ class Co2EstimatesController  < ApplicationController
         flash[:alert] = "No results returned. Choose another filter!"
       end
     end
-
   end
 
   def new

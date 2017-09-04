@@ -1,10 +1,14 @@
 <% if current_user %>
 <h1 id='title'>Take the Carbon Emittance Estimation Quiz!</h1>
-<%= link_to "Quiz", new_co2_estimate_path, class: 'btn btn-default' %> <%= link_to "Methods", methods_path, class: 'btn btn-default' %>
+<%= link_to "Quiz", new_co2_estimate_path, class: 'btn btn-default' %>
 <hr>
+<% else %>
+  <h1 id=title>Sign in to take the Quiz!</h1>
 <% end %>
 
-<h1>Raw Data Overview</h1>
+<%= link_to "Methods", methods_path, class: 'btn btn-default' %>
+
+<h1 class="josefin">Raw Data Overview</h1>
 
 <% if @filter_type != nil%>
   <h3 id="about">Sorted by <em><%= @filter_type %></em></h3>
