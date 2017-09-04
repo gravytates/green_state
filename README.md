@@ -9,6 +9,8 @@ Sign up and take the quiz to estimate your monthly carbon dioxide emittance. The
 
 Seeded with the faker gem, these results aren't reflective of real live users, but they give a great simulation of how this filled data-base would look like and operate.
 
+This site's inspiration and methods for the carbon quiz was borrowed with permission from its original iteration: https://github.com/gravytates/carbon-estimator where I originally built the simple application with Dana Weiss and Ben Williams.
+
 Enjoy!
 
 ## Prerequisites
