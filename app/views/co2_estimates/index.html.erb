@@ -6,6 +6,11 @@
 
 <%= link_to "Lowest", :sort_by => 'lowest' %> |
 <%= link_to "Highest", :sort_by => 'highest' %> |
+<%= link_to "Alphabetical", :sort_by => 'alphabetical' %> |
+<%= link_to "Reverse Alphabetical", :sort_by => 'reverse_alpha' %> |
+<%= link_to "Newest", :sort_by => 'newest' %> |
+<%= link_to "Oldest", :sort_by => 'oldest' %> 
+
 
 <% if current_user %>
   <h5><%= link_to "Take the Carbon Emittance Quiz!", new_co2_estimate_path %></h5>

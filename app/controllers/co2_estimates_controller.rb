@@ -8,8 +8,8 @@ class Co2EstimatesController  < ApplicationController
 
     @filter_type = params[:sort_by]
     # binding.pry
-    if params[:sort_by] == nil
-      @co2_estimates = Co2Estimate.lowest
+    if params[:sort_by] == nil || params[:sort_by] == 'alphabetical'
+      @co2_estimates = Co2Estimate.all
     else
       @co2_estimates = Co2Estimate.send(params[:sort_by])
       if Co2Estimate.send(params[:sort_by]) == []

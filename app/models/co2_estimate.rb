@@ -1,8 +1,13 @@
 class Co2Estimate < ApplicationRecord
   belongs_to :user
 
+  scope :alphabetical, ->  { joins(:user).merge(User.order(name: :asc)) }
+  scope :reverse_alpha, ->  { joins(:user).merge(User.order(name: :desc)) }
   scope :highest, -> { order(monthly_emittance: :desc) }
   scope :lowest, -> { order(monthly_emittance: :asc) }
+  scope :newest, -> { order(created_at: :asc) }
+  scope :oldest, -> { order(created_at: :desc) }
+
 
   def exam_math(params)
 
