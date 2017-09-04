@@ -28,5 +28,9 @@
 
     <%= column_chart Co2Estimate.joins(:user).merge(User.group(:state)).average(:monthly_emittance) %>
 
+    <%= line_chart [
+          {name: "Oregon", data: @oregon.map{|t| [t.user_id, t.monthly_emittance] }},
+          {name: "Washington", data: @washington.map{|t| [t.user_id, t.monthly_emittance] }}] %>
+
   </div>
 </div>
