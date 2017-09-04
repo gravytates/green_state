@@ -44,6 +44,7 @@ class Co2EstimatesController  < ApplicationController
   def data
     @oregon = Co2Estimate.oregon
     @washington = Co2Estimate.washington
+    @co2_estimates = Co2Estimate.all
   end
 
 private
