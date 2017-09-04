@@ -17,8 +17,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-#results_table {
-  justify-content: center;
-  width: 275px;
-  color: orange;
+.overlay_menu {
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+
+  position: fixed;
+  top: 0;
+  margin: 0;
+  width: 100%;
+  z-index: 6;
+  background: rgb(153,178,229);
+  height: 6vh;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row nowrap;
+  justify-content: space-around;
 }
+
+.nav-option {
+  padding: 0px 5px 5px 5px;
+  margin: 10px 0 0 0;
+  font-size: 120%;
+  text-align: center;
+  flex: 1 1 auto;
+  cursor: pointer;
+}
+
+.nav-option a {color: white;}

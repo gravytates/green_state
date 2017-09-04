@@ -6,22 +6,25 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   </head>
 
   <body>
-    <nav class="overlay-menu">
-       <p>
+    <nav class="overlay_menu">
          <% if current_user %>
-         <p>
-           <%= link_to "Home", root_path %> | <%= link_to "CO2 Estimator", co2_estimates_path %> | User: <%= current_user.email %> | <%= link_to "Sign out", destroy_user_session_path, method: 'delete' %> | <%= link_to "User Profile", user_path(current_user) %> | <%= link_to "Data", data_path %>
-         </p>
+           <p class='nav-option'><%= link_to "Home", root_path %></p>
+           <p class='nav-option'><%= link_to "CO2 Estimator", co2_estimates_path %></p>
+           <p class='nav-option'><%= link_to "Data", data_path %></p>
+           <p class='nav-option'><%= link_to "User Profile", user_path(current_user) %> </p>
+           <p class='nav-option'><%= link_to "Sign out", destroy_user_session_path, method: 'delete' %> </p>
          <% else %>
-         <p>
-           <%= link_to "Home", root_path %> | <%= link_to "CO2 Estimator", co2_estimates_path %> | <%= link_to 'Sign In', new_user_session_path %> |
-           <%= link_to 'Sign Up', new_user_registration_path %> | <%= link_to "Data", data_path %>
+           <p class='nav-option'><%= link_to "Home", root_path %> </p>
+           <p class='nav-option'><%= link_to "CO2 Estimator", co2_estimates_path %> </p>
+           <p class='nav-option'><%= link_to "Data", data_path %></p>
+           <p class='nav-option'><%= link_to 'Sign In', new_user_session_path %></p>
+           <p class='nav-option'><%= link_to 'Sign Up', new_user_registration_path %> </p>
          </p>
          <% end %>
-       </p>
      </nav>
     <div class="container">
       <p class="notice"><%= notice %></p>
