@@ -120,8 +120,7 @@ This application includes both Unit and User Integration testing.  It primarily 
 
 ### Landing
 
-![landing](https://user-images.githubusercontent.com/25161777/30040060-a9519da4-918e-11e7-848a-3f044655d678.png)
-
+![home](https://user-images.githubusercontent.com/25161777/30040877-c1d95a50-9199-11e7-9f2b-04cf5ac537ea.png)
 ### Data
 
 ![quiz](https://user-images.githubusercontent.com/25161777/30040063-b0eec12c-918e-11e7-90e4-2ff37ec8bbb2.png)
