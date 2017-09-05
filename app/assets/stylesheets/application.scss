@@ -17,6 +17,26 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.jumbotron {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  background-image: url(background.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: -8vh 0 -1vh 0;
+
+}
+
+.notice {
+  margin-top: 8vh;
+}
+
+.alert {
+  margin-top: 8vh;
+}
+
 .overlay_menu {
   color: white;
   font-family: 'Josefin Sans', sans-serif;

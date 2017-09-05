@@ -1,7 +1,7 @@
 # _Green State_
 
+![home](https://user-images.githubusercontent.com/25161777/30040877-c1d95a50-9199-11e7-9f2b-04cf5ac537ea.png)
 
-![landing](https://user-images.githubusercontent.com/25161777/30040060-a9519da4-918e-11e7-848a-3f044655d678.png)
 
 [Visit the Site!](https://green-state.herokuapp.com/)
 

@@ -1,67 +1,69 @@
-<h1 id='title'>Looking at the Data... How Green are these States?</h1>
+<div class="container">
+  <h1 id='title'>Looking at the Data... How Green are these States?</h1>
 
-<div class="well">
+  <div class="well">
+    <p>
+    We'll look at our data through charts and a t-test. The null hypothesis is that the two averages are similar (data is within 95% normal distribution). If the null hypothesis is rejected, this means the two samples are statistically different. An important assumption to be made with t-tests are that the variances are equal (roughly equated to standard deviations), so the p value for both equal variance scenarios is included.
+  </p>
   <p>
-  We'll look at our data through charts and a t-test. The null hypothesis is that the two averages are similar (data is within 95% normal distribution). If the null hypothesis is rejected, this means the two samples are statistically different. An important assumption to be made with t-tests are that the variances are equal (roughly equated to standard deviations), so the p value for both equal variance scenarios is included.
-</p>
-<p>
-  The t-test equation:
-</p><br>
+    The t-test equation:
+  </p><br>
 
-<%= image_tag("ttest.gif", alt: "t-test equation") %><br><br>
+  <%= image_tag("ttest.gif", alt: "t-test equation") %><br><br>
 
-<p>
-  Where X-bar = average emission, s = standard deviation, n = sample size. Standard deviation is calculated using:
-</p>
+  <p>
+    Where X-bar = average emission, s = standard deviation, n = sample size. Standard deviation is calculated using:
+  </p>
 
-<%= image_tag("sd.png", alt: "standard deviation equation") %><br>
+  <%= image_tag("sd.png", alt: "standard deviation equation") %><br>
 
-</div>
-<div class="row">
-  <div class="col-md-12">
-      <h3>Current Results (will update as more results are produced/deleted):</h3>
-      <p>T-value: <%= @co2_estimates.t_value %></p>
-      <p>Degrees of Freedom: <%= @co2_estimates.deg_freedom %></p>
-      <p>Probability with equal variance: <%= @co2_estimates.p_value[0] %></p>
-      <p>Probability with non-equal variance: <%= @co2_estimates.p_value[1] %></p>
   </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6">
-    <h3>Washington</h3>
-    <p>Average Estimated Emittance: <%= @washington.average_emittance %> lbs CO<sub>2</sub>/mo</p>
-    <p>Total Records (n): <%= @washington.count %></p>
-    <p>Standard Deviation: <%= @washington.standard_dev %></p>
+  <div class="row">
+    <div class="col-md-12">
+        <h3>Current Results (will update as more results are produced/deleted):</h3>
+        <p>T-value: <%= @co2_estimates.t_value %></p>
+        <p>Degrees of Freedom: <%= @co2_estimates.deg_freedom %></p>
+        <p>Probability with equal variance: <%= @co2_estimates.p_value[0] %></p>
+        <p>Probability with non-equal variance: <%= @co2_estimates.p_value[1] %></p>
+    </div>
   </div>
-  <div class="col-md-6">
-    <h3>Oregon</h3>
-      <p>Average Estimated Emittance: <%= @oregon.average_emittance %> lbs CO<sub>2</sub>/mo</p>
-      <p>Total Records (n): <%= @oregon.count %></p>
-      <p>Standard Deviation: <%= @oregon.standard_dev %></p>
-  </div>
-</div>
 
-<hr>
-<div class="row">
-  <div class="col-md-12">
-    <h4>Average Emittance between States</h4>
-    <%= column_chart Co2Estimate.joins(:user).merge(User.group(:state)).average(:monthly_emittance), ytitle: "Emittance (CO2 lbs/mo)" %>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Washington</h3>
+      <p>Average Estimated Emittance: <%= @washington.average_emittance %> lbs CO<sub>2</sub>/mo</p>
+      <p>Total Records (n): <%= @washington.count %></p>
+      <p>Standard Deviation: <%= @washington.standard_dev %></p>
+    </div>
+    <div class="col-md-6">
+      <h3>Oregon</h3>
+        <p>Average Estimated Emittance: <%= @oregon.average_emittance %> lbs CO<sub>2</sub>/mo</p>
+        <p>Total Records (n): <%= @oregon.count %></p>
+        <p>Standard Deviation: <%= @oregon.standard_dev %></p>
+    </div>
   </div>
-  <div class="col-md-12">
-    <hr>
 
-    <h4>Emittance between states over time</h4>
-    <%= line_chart [
-          {name: "Oregon", data: @oregon.map{|t| [t.user_id, t.monthly_emittance] }},
-          {name: "Washington", data: @washington.map{|t| [t.user_id, t.monthly_emittance] }}], discrete: false, xtitle: "Time of Quiz Result", ytitle: "Emittance (CO2 lbs/mo)", curve: true %>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Average Emittance between States</h4>
+      <%= column_chart Co2Estimate.joins(:user).merge(User.group(:state)).average(:monthly_emittance), ytitle: "Emittance (CO2 lbs/mo)" %>
+    </div>
+    <div class="col-md-12">
+      <hr>
+
+      <h4>Emittance between states over time</h4>
+      <%= line_chart [
+            {name: "Oregon", data: @oregon.map{|t| [t.user_id, t.monthly_emittance] }},
+            {name: "Washington", data: @washington.map{|t| [t.user_id, t.monthly_emittance] }}], discrete: false, xtitle: "Time of Quiz Result", ytitle: "Emittance (CO2 lbs/mo)", curve: true %>
+    </div>
   </div>
-</div>
 
-<br>
-<div class="well">
-  <h3>Lessons Learned</h3>
-  <p>Washington users appear to emit much more carbon dioxide than Oregon users. Of course these results are attributed to how the database is originally seeded. Upon set up, each user is assigned a monthly emittance like so: <i>sequence(:monthly_emittance) {|n| n * (Faker::Number.between(70, 500)) }</i> </p>
-  <p>Because Oregon users were seeded first, their user id's ('n' in the build sequence) had lower numbers (1-100), meaning their potential range would be much lower than Washington users who were seeded by id's 101-200.</p>
+  <br>
+  <div class="well">
+    <h3>Lessons Learned</h3>
+    <p>Washington users appear to emit much more carbon dioxide than Oregon users. Of course these results are attributed to how the database is originally seeded. Upon set up, each user is assigned a monthly emittance like so: <i>sequence(:monthly_emittance) {|n| n * (Faker::Number.between(70, 500)) }</i> </p>
+    <p>Because Oregon users were seeded first, their user id's ('n' in the build sequence) had lower numbers (1-100), meaning their potential range would be much lower than Washington users who were seeded by id's 101-200.</p>
+  </div>
+  <br>
 </div>
-<br>

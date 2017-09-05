@@ -1,29 +1,30 @@
-<% if current_user %>
-<h1 id='title'>Take the Carbon Emittance Estimation Quiz!</h1>
-<%= link_to "Quiz", new_co2_estimate_path, class: 'btn btn-default' %>
-<hr>
-<% else %>
-  <h1 id=title>Sign in to take the Quiz!</h1>
-<% end %>
+<div class="container">
+  <% if current_user %>
+  <h1 id='title'>Take the Carbon Emittance Estimation Quiz!</h1>
+  <%= link_to "Quiz", new_co2_estimate_path, class: 'btn btn-default' %>
+  <hr>
+  <% else %>
+    <h1 id=title>Sign in to take the Quiz!</h1>
+  <% end %>
 
-<%= link_to "Methods", methods_path, class: 'btn btn-default' %>
+  <%= link_to "Methods", methods_path, class: 'btn btn-default' %>
 
-<h1 class="josefin">Raw Data Overview</h1>
+  <h1 class="josefin">Raw Data Overview</h1>
 
-<% if @filter_type != nil%>
-  <h3 id="about">Sorted by <em><%= @filter_type %></em></h3>
-<% end %>
+  <% if @filter_type != nil%>
+    <h3 id="about">Sorted by <em><%= @filter_type %></em></h3>
+  <% end %>
 
-<%= link_to "Lowest", :sort_by => 'lowest' %> |
-<%= link_to "Highest", :sort_by => 'highest' %> |
-<%= link_to "Alphabetical", :sort_by => 'alphabetical' %> |
-<%= link_to "Reverse Alphabetical", :sort_by => 'reverse_alpha' %> |
-<%= link_to "Newest", :sort_by => 'newest' %> |
-<%= link_to "Oldest", :sort_by => 'oldest' %>
+  <%= link_to "Lowest", :sort_by => 'lowest' %> |
+  <%= link_to "Highest", :sort_by => 'highest' %> |
+  <%= link_to "Alphabetical", :sort_by => 'alphabetical' %> |
+  <%= link_to "Reverse Alphabetical", :sort_by => 'reverse_alpha' %> |
+  <%= link_to "Newest", :sort_by => 'newest' %> |
+  <%= link_to "Oldest", :sort_by => 'oldest' %>
 
 
 
-<table class="table">
+  <table class="table">
     <thead>
       <tr>
         <th>User</th>
@@ -41,3 +42,4 @@
       <% end %>
     </tbody>
   </table>
+</div>
