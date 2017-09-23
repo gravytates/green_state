@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.1/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.1/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.1/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.1/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.1/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-09-23T15:49:07-07:00">2017-09-23T15:49:07-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-09-23T16:13:34-07:00">2017-09-23T16:13:34-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">82.2%</span></span>
+    (<span class="covered_percent"><span class="green">92.5%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.93
+       <span class="green">
+         1.48
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>33</b> files in total.
-    <b>382</b> relevant lines. 
-    <span class="green"><b>314</b> lines covered</span> and
-    <span class="red"><b>68</b> lines missed </span>
+    <b>733</b> relevant lines. 
+    <span class="green"><b>678</b> lines covered</span> and
+    <span class="red"><b>55</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -77,7 +77,7 @@
         <td>10</td>
         <td>10</td>
         <td>0</td>
-        <td>1.9</td>
+        <td>7.3</td>
       </tr>
       
       <tr>
@@ -87,7 +87,7 @@
         <td>33</td>
         <td>22</td>
         <td>11</td>
-        <td>0.7</td>
+        <td>4.2</td>
       </tr>
       
       <tr>
@@ -162,12 +162,12 @@
       
       <tr>
         <td class="strong"><a href="#3f6becfac54d4ab87198f77abb698e362a1791a1" class="src_link" title="app/models/co2_estimate.rb">app/models/co2_estimate.rb</a></td>
-        <td class="red strong">43.0 %</td>
+        <td class="red strong">56.0 %</td>
         <td>166</td>
         <td>100</td>
-        <td>43</td>
-        <td>57</td>
-        <td>0.4</td>
+        <td>56</td>
+        <td>44</td>
+        <td>2.5</td>
       </tr>
       
       <tr>
@@ -333,9 +333,9 @@
       <tr>
         <td class="strong"><a href="#ca629247040ef1213a02197a02367ad3ed0e7955" class="src_link" title="spec/features/co2_test_pages_spec.rb">spec/features/co2_test_pages_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>48</td>
-        <td>41</td>
-        <td>41</td>
+        <td>415</td>
+        <td>392</td>
+        <td>392</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -556,20 +556,20 @@
           <code class="ruby">  def configure_permitted_parameters</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="11">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="22" data-linenumber="11">
+          <span class="hits">22</span>
           
           <code class="ruby">    devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password, :name, :admin, :state])</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="12">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="22" data-linenumber="12">
+          <span class="hits">22</span>
           
           <code class="ruby">    devise_parameter_sanitizer.permit(:sign_in, keys: [:email, :password, :name, :admin, :state])</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="13">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="22" data-linenumber="13">
+          <span class="hits">22</span>
           
           <code class="ruby">    devise_parameter_sanitizer.permit(:account_update, keys: [:email, :password, :current_password, :name, :admin, :state])</code>
         </li>
@@ -629,20 +629,20 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="5">
+          <span class="hits">10</span>
           
           <code class="ruby">    @filter_type = params[:sort_by]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="6">
+          <span class="hits">10</span>
           
           <code class="ruby">    if params[:sort_by] == nil || params[:sort_by] == &#39;alphabetical&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="7">
+          <span class="hits">10</span>
           
           <code class="ruby">      @co2_estimates = Co2Estimate.all</code>
         </li>
@@ -701,8 +701,8 @@
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="17">
+          <span class="hits">10</span>
           
           <code class="ruby">    @co2_estimate = Co2Estimate.new</code>
         </li>
@@ -731,14 +731,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="22">
+          <span class="hits">10</span>
           
           <code class="ruby">    @user = current_user</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="23">
+          <span class="hits">10</span>
           
           <code class="ruby">    @co2_estimate = @user.co2_estimates.new(co2_estimate_params)</code>
         </li>
@@ -749,32 +749,32 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="25">
+          <span class="hits">10</span>
           
           <code class="ruby">    if @co2_estimate.save</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="26">
+          <span class="hits">10</span>
           
           <code class="ruby">    monthly_emittance = @co2_estimate.exam_math co2_estimate_params</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="27">
+          <span class="hits">10</span>
           
           <code class="ruby">    @co2_estimate.update(:monthly_emittance =&gt; monthly_emittance)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="28">
+          <span class="hits">10</span>
           
           <code class="ruby">    flash[:notice] = (&quot;Estimate successfully added! Estimated emissions: &quot; + @co2_estimate.monthly_emittance.to_s + &quot;lbs CO2 per month.&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="29">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="29">
+          <span class="hits">10</span>
           
           <code class="ruby">      redirect_to user_path(current_user)</code>
         </li>
@@ -923,8 +923,8 @@
           <code class="ruby">  def co2_estimate_params</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="54">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="20" data-linenumber="54">
+          <span class="hits">20</span>
           
           <code class="ruby">    params.require(:co2_estimate).permit(</code>
         </li>
@@ -1400,11 +1400,11 @@
         <div class="source_table" id="3f6becfac54d4ab87198f77abb698e362a1791a1">
   <div class="header">
     <h3>app/models/co2_estimate.rb</h3>
-    <h4><span class="red">43.0 %</span> covered</h4>
+    <h4><span class="red">56.0 %</span> covered</h4>
     <div>
       <b>100</b> relevant lines. 
-      <span class="green"><b>43</b> lines covered</span> and
-      <span class="red"><b>57</b> lines missed.</span>
+      <span class="green"><b>56</b> lines covered</span> and
+      <span class="red"><b>44</b> lines missed.</span>
     </div>
   </div>
   
@@ -1699,98 +1699,98 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="49">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="49">
+          <span class="hits">10</span>
           
           <code class="ruby">    if self.mode === &#39;walk&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="50">
-          
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
           
           <code class="ruby">      modeEfficiency = 0</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="51">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="9" data-linenumber="51">
+          <span class="hits">9</span>
           
           <code class="ruby">    elsif self.mode === &#39;bicycle&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="52">
-          
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
           
           <code class="ruby">      modeEfficiency = 0</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="53">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="8" data-linenumber="53">
+          <span class="hits">8</span>
           
           <code class="ruby">    elsif self.mode === &#39;MAX&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="54">
-          
+        <li class="covered" data-hits="2" data-linenumber="54">
+          <span class="hits">2</span>
           
           <code class="ruby">      modeEfficiency = 0.36</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="55">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="6" data-linenumber="55">
+          <span class="hits">6</span>
           
           <code class="ruby">    elsif self.mode === &#39;bus&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="56">
-          
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
           
           <code class="ruby">      modeEfficiency = 0.56</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="57">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="5" data-linenumber="57">
+          <span class="hits">5</span>
           
           <code class="ruby">    elsif self.mode === &#39;truck (older than 2016)&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="58">
-          
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
           
           <code class="ruby">      modeEfficiency = 1.32</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="59">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="59">
+          <span class="hits">4</span>
           
           <code class="ruby">    elsif self.mode === &#39;small pickup&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="60">
-          
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
           
           <code class="ruby">      modeEfficiency = 0.94</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="61">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="61">
+          <span class="hits">3</span>
           
           <code class="ruby">    elsif self.mode === &#39;standard pickup&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="62">
-          
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
           
           <code class="ruby">      modeEfficiency = 1.1</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="63">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="63">
+          <span class="hits">2</span>
           
           <code class="ruby">    elsif self.mode === &#39;hybrid&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="64">
-          
+        <li class="covered" data-hits="1" data-linenumber="64">
+          <span class="hits">1</span>
           
           <code class="ruby">      modeEfficiency = 0.39</code>
         </li>
@@ -1819,8 +1819,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="69">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="69">
+          <span class="hits">10</span>
           
           <code class="ruby">    modeTotal = (modeEfficiency * self.miles * 4.33)</code>
         </li>
@@ -1831,8 +1831,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="71">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="71">
+          <span class="hits">10</span>
           
           <code class="ruby">    oil_electric_total = ((self.fuel_oil * 7.59) + (self.electricity * 10.55))</code>
         </li>
@@ -1843,14 +1843,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="73">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="73">
+          <span class="hits">10</span>
           
           <code class="ruby">    if self.nat_gas &lt;= 9.6</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="74">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="9" data-linenumber="74">
+          <span class="hits">9</span>
           
           <code class="ruby">      nat_gas_total = 0</code>
         </li>
@@ -1861,8 +1861,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="76">
-          
+        <li class="covered" data-hits="1" data-linenumber="76">
+          <span class="hits">1</span>
           
           <code class="ruby">      nat_gas_total = (self.nat_gas - 9.5) * 8.85</code>
         </li>
@@ -1879,8 +1879,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="79">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="79">
+          <span class="hits">10</span>
           
           <code class="ruby">    homeTotal = oil_electric_total + nat_gas_total</code>
         </li>
@@ -1891,20 +1891,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="81">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="81">
+          <span class="hits">10</span>
           
           <code class="ruby">    wasteProduct = 692</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="82">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="82">
+          <span class="hits">10</span>
           
           <code class="ruby">    if self.alum_re == &#39;yes&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="83">
-          
+        <li class="covered" data-hits="10" data-linenumber="83">
+          <span class="hits">10</span>
           
           <code class="ruby">      wasteProduct -= 72.5</code>
         </li>
@@ -1915,14 +1915,14 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="85">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="85">
+          <span class="hits">10</span>
           
           <code class="ruby">    if self.plastic_re == &#39;yes&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="86">
-          
+        <li class="covered" data-hits="10" data-linenumber="86">
+          <span class="hits">10</span>
           
           <code class="ruby">      wasteProduct -= 72.5</code>
         </li>
@@ -1933,14 +1933,14 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="88">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="88">
+          <span class="hits">10</span>
           
           <code class="ruby">    if self.glass_re == &#39;yes&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="89">
-          
+        <li class="covered" data-hits="10" data-linenumber="89">
+          <span class="hits">10</span>
           
           <code class="ruby">      wasteProduct -= 72.5</code>
         </li>
@@ -1951,14 +1951,14 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="91">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="91">
+          <span class="hits">10</span>
           
           <code class="ruby">    if self.paper_re == &#39;yes&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="92">
-          
+        <li class="covered" data-hits="10" data-linenumber="92">
+          <span class="hits">10</span>
           
           <code class="ruby">      wasteProduct -= 72.5</code>
         </li>
@@ -1969,8 +1969,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="94">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="94">
+          <span class="hits">10</span>
           
           <code class="ruby">    totalWaste = wasteProduct/12.0</code>
         </li>
@@ -1981,8 +1981,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="96">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="96">
+          <span class="hits">10</span>
           
           <code class="ruby">    foodTotal = ((self.lamb * 86.44) + (self.beef * 59.44) + (self.cheese * 29.77) + (self.pork * 26.68) + (self.turkey * 24) + (self.chicken * 15.21) + (self.tuna * 13.45) + (self.eggs * 10.58) + (self.potatoes * 6.39) + (self.rice * 5.95) + (self.nuts * 5.07) + (self.beans * 4.41) + (self.vegetables * 4.41) + (self.milk * 4.19) + (self.fruit * 2.43) + (self.lentils * 1.99))</code>
         </li>
@@ -1999,8 +1999,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="99">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="99">
+          <span class="hits">10</span>
           
           <code class="ruby">    return (modeTotal + homeTotal + totalWaste + foodTotal)</code>
         </li>
@@ -5787,8 +5787,8 @@
     <h3>spec/features/co2_test_pages_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>41</b> relevant lines. 
-      <span class="green"><b>41</b> lines covered</span> and
+      <b>392</b> relevant lines. 
+      <span class="green"><b>392</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5808,94 +5808,94 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="3">
           
-          <code class="ruby">describe &quot;taking a co3 emittance test&quot; do</code>
+          
+          <code class="ruby"># &#39;bicycle&#39;, &#39;MAX&#39;, &#39;bus&#39;, &#39;truck (older than 2016)&#39;, &#39;small pickup&#39;, &#39;standard pickup&#39;, &#39;hybrid&#39;, &#39;sedan&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="4">
           
-          <code class="ruby">  it &#39;will take test and record result&#39; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit root_path</code>
+          <code class="ruby">describe &quot;taking a co3 emittance test&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_link &quot;Sign Up&quot;</code>
+          <code class="ruby">  it &#39;will take test with walking mode of transportation and record result&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &quot;user_name&quot;, with: &quot;christ&quot;</code>
+          <code class="ruby">    visit root_path</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &quot;user_email&quot;, with: &quot;christ@god.com&quot;</code>
+          <code class="ruby">    click_link &quot;Sign Up&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &quot;user_password&quot;, with: &quot;123456&quot;</code>
+          <code class="ruby">    fill_in &quot;user_name&quot;, with: &quot;christ&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &quot;user_password_confirmation&quot;, with: &quot;123456&quot;</code>
+          <code class="ruby">    fill_in &quot;user_email&quot;, with: &quot;christ@god.com&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_button &quot;Sign up&quot;</code>
+          <code class="ruby">    fill_in &quot;user_password&quot;, with: &quot;123456&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content &quot;You have signed up successfully.&quot;</code>
+          <code class="ruby">    fill_in &quot;user_password_confirmation&quot;, with: &quot;123456&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_on &#39;CO2 Estimator&#39;</code>
+          <code class="ruby">    click_button &quot;Sign up&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_link &#39;Quiz&#39;</code>
+          <code class="ruby">    expect(page).to have_content &quot;You have signed up successfully.&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
+          <code class="ruby">    click_on &#39;CO2 Estimator&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;Quiz&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
           <code class="ruby">    expect(page).to have_content &quot;New CO2 Quiz&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
-          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
@@ -5919,7 +5919,7 @@
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">    select &#39;...&#39;, :from =&gt; &quot;What is your primary mode of transportation?&quot;</code>
+          <code class="ruby">    select &#39;walk&#39;, :from =&gt; &quot;What is your primary mode of transportation?&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="22">
@@ -5931,25 +5931,25 @@
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">    select &#39;no&#39;, :from =&gt; &quot;aluminum?&quot;</code>
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;aluminum?&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
-          <code class="ruby">    select &#39;no&#39;, :from =&gt; &quot;plastic?&quot;</code>
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;plastic?&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
-          <code class="ruby">    select &#39;no&#39;, :from =&gt; &quot;glass?&quot;</code>
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;glass?&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">    select &#39;no&#39;, :from =&gt; &quot;paper?&quot;</code>
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;paper?&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="27">
@@ -6048,37 +6048,2239 @@
           <code class="ruby">    fill_in &quot;lentils?&quot;, with: 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="44">
+        <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
           <code class="ruby">    click_button &#39;Create Co2 estimate&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
+        <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content &#39;Monthly Estimated Emittance: 57.67 lbs CO2 / month&#39;</code>
+          <code class="ruby">    expect(page).to have_content &#39;Monthly Estimated Emittance: 33.5 lbs CO2 / month&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;will take test with biking mode of transportationand record result&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit root_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &quot;Sign Up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_name&quot;, with: &quot;christ&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_email&quot;, with: &quot;christ@god.com&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password_confirmation&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &quot;Sign up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;You have signed up successfully.&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;CO2 Estimator&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;Quiz&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;New CO2 Quiz&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for natural gas?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for fuel oil?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for electricity?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;bicycle&#39;, :from =&gt; &quot;What is your primary mode of transportation?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how many miles do you travel per week?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="63">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;aluminum?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="64">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;plastic?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="65">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;glass?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;paper?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lamb?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beef?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="69">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;cheese?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="70">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;pork?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;turkey?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;chicken?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;tuna?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;eggs?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;potatoes?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="76">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;rice?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="77">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;nuts?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="78">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beans/tofu?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="79">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;vegetables?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="80">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;milk?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="81">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;fruit?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="82">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lentils?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="83">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &#39;Create Co2 estimate&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="84">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &#39;User Profile&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;will take test with MAX mode of transportationand record result&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="88">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit root_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="89">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &quot;Sign Up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="90">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_name&quot;, with: &quot;christ&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="91">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_email&quot;, with: &quot;christ@god.com&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="92">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="93">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password_confirmation&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="94">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &quot;Sign up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="95">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;You have signed up successfully.&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="96">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;CO2 Estimator&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="97">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;Quiz&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="98">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;New CO2 Quiz&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="99">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for natural gas?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="100">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for fuel oil?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="101">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for electricity?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="102">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;MAX&#39;, :from =&gt; &quot;What is your primary mode of transportation?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="103">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how many miles do you travel per week?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="104">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;aluminum?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="105">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;plastic?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="106">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;glass?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="107">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;paper?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="108">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lamb?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="109">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beef?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="110">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;cheese?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="111">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;pork?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="112">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;turkey?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="113">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;chicken?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="114">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;tuna?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="115">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;eggs?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="116">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;potatoes?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="117">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;rice?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="118">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;nuts?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="119">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beans/tofu?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="120">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;vegetables?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="121">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;milk?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="122">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;fruit?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="123">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lentils?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="124">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &#39;Create Co2 estimate&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="125">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &#39;User Profile&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="126">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="127">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="128">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;will take test with MAX mode of transportationand record result&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="129">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit root_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="130">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &quot;Sign Up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="131">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_name&quot;, with: &quot;christ&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="132">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_email&quot;, with: &quot;christ@god.com&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="133">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="134">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password_confirmation&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="135">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &quot;Sign up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="136">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;You have signed up successfully.&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="137">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;CO2 Estimator&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="138">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;Quiz&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="139">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;New CO2 Quiz&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="140">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for natural gas?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="141">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for fuel oil?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="142">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for electricity?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="143">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;MAX&#39;, :from =&gt; &quot;What is your primary mode of transportation?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="144">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how many miles do you travel per week?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="145">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;aluminum?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="146">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;plastic?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="147">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;glass?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="148">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;paper?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="149">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lamb?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="150">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beef?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="151">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;cheese?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="152">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;pork?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="153">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;turkey?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="154">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;chicken?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="155">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;tuna?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="156">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;eggs?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="157">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;potatoes?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="158">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;rice?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="159">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;nuts?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="160">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beans/tofu?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="161">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;vegetables?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="162">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;milk?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="163">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;fruit?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="164">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lentils?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="165">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &#39;Create Co2 estimate&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="166">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &#39;User Profile&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="167">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="168">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="169">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;will take test with bus mode of transportation and natural gas more than 10 dollars/mo: record result&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="170">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit root_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="171">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &quot;Sign Up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="172">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_name&quot;, with: &quot;christ&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="173">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_email&quot;, with: &quot;christ@god.com&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="174">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="175">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password_confirmation&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="176">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &quot;Sign up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="177">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;You have signed up successfully.&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="178">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;CO2 Estimator&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="179">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;Quiz&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="180">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;New CO2 Quiz&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="181">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for natural gas?&quot;, with: 10</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="182">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for fuel oil?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="183">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for electricity?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="184">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;bus&#39;, :from =&gt; &quot;What is your primary mode of transportation?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="185">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how many miles do you travel per week?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="186">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;aluminum?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="187">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;plastic?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="188">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;glass?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="189">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;paper?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="190">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lamb?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="191">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beef?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="192">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;cheese?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="193">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;pork?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="194">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;turkey?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="195">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;chicken?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="196">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;tuna?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="197">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;eggs?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="198">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;potatoes?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="199">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;rice?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="200">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;nuts?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="201">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beans/tofu?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="202">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;vegetables?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="203">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;milk?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="204">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;fruit?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="205">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lentils?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="206">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &#39;Create Co2 estimate&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="207">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &#39;User Profile&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="208">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="209">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="210">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;will take test with truck (older than 2016) mode of transportationand record result&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="211">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit root_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="212">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &quot;Sign Up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="213">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_name&quot;, with: &quot;christ&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="214">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_email&quot;, with: &quot;christ@god.com&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="215">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="216">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password_confirmation&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="217">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &quot;Sign up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="218">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;You have signed up successfully.&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="219">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;CO2 Estimator&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="220">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;Quiz&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="221">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;New CO2 Quiz&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="222">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for natural gas?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="223">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for fuel oil?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="224">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for electricity?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="225">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;truck (older than 2016)&#39;, :from =&gt; &quot;What is your primary mode of transportation?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="226">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how many miles do you travel per week?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="227">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;aluminum?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="228">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;plastic?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="229">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;glass?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="230">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;paper?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="231">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lamb?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="232">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beef?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="233">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;cheese?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="234">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;pork?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="235">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;turkey?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="236">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;chicken?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="237">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;tuna?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="238">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;eggs?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="239">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;potatoes?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="240">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;rice?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="241">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;nuts?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="242">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beans/tofu?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="243">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;vegetables?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="244">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;milk?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="245">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;fruit?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="246">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lentils?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="247">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &#39;Create Co2 estimate&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="248">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &#39;User Profile&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="249">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="250">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="251">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;will take test with small pickup mode of transportationand record result&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="252">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit root_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="253">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &quot;Sign Up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="254">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_name&quot;, with: &quot;christ&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="255">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_email&quot;, with: &quot;christ@god.com&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="256">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="257">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password_confirmation&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="258">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &quot;Sign up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="259">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;You have signed up successfully.&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="260">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;CO2 Estimator&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="261">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;Quiz&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="262">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;New CO2 Quiz&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="263">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for natural gas?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="264">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for fuel oil?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="265">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for electricity?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="266">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;small pickup&#39;, :from =&gt; &quot;What is your primary mode of transportation?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="267">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how many miles do you travel per week?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="268">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;aluminum?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="269">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;plastic?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="270">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;glass?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="271">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;paper?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="272">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lamb?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="273">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beef?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="274">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;cheese?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="275">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;pork?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="276">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;turkey?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="277">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;chicken?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="278">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;tuna?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="279">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;eggs?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="280">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;potatoes?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="281">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;rice?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="282">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;nuts?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="283">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beans/tofu?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="284">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;vegetables?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="285">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;milk?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="286">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;fruit?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="287">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lentils?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="288">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &#39;Create Co2 estimate&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="289">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &#39;User Profile&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="290">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="291">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="292">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;will take test with standard pickup mode of transportationand record result&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="293">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit root_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="294">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &quot;Sign Up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="295">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_name&quot;, with: &quot;christ&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="296">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_email&quot;, with: &quot;christ@god.com&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="297">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="298">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password_confirmation&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="299">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &quot;Sign up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="300">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;You have signed up successfully.&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="301">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;CO2 Estimator&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="302">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;Quiz&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="303">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;New CO2 Quiz&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="304">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for natural gas?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="305">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for fuel oil?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="306">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for electricity?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="307">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;standard pickup&#39;, :from =&gt; &quot;What is your primary mode of transportation?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="308">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how many miles do you travel per week?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="309">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;aluminum?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="310">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;plastic?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="311">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;glass?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="312">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;paper?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="313">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lamb?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="314">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beef?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="315">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;cheese?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="316">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;pork?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="317">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;turkey?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="318">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;chicken?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="319">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;tuna?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="320">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;eggs?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="321">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;potatoes?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="322">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;rice?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="323">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;nuts?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="324">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beans/tofu?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="325">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;vegetables?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="326">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;milk?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="327">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;fruit?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="328">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lentils?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="329">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &#39;Create Co2 estimate&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="330">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &#39;User Profile&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="331">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="332">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="333">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;will take test with hybrid mode of transportationand record result&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="334">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit root_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="335">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &quot;Sign Up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="336">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_name&quot;, with: &quot;christ&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="337">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_email&quot;, with: &quot;christ@god.com&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="338">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="339">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password_confirmation&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="340">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &quot;Sign up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="341">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;You have signed up successfully.&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="342">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;CO2 Estimator&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="343">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;Quiz&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="344">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;New CO2 Quiz&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="345">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for natural gas?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="346">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for fuel oil?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="347">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for electricity?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="348">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;hybrid&#39;, :from =&gt; &quot;What is your primary mode of transportation?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="349">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how many miles do you travel per week?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="350">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;aluminum?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="351">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;plastic?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="352">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;glass?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="353">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;paper?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="354">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lamb?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="355">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beef?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="356">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;cheese?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="357">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;pork?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="358">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;turkey?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="359">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;chicken?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="360">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;tuna?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="361">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;eggs?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="362">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;potatoes?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="363">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;rice?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="364">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;nuts?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="365">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beans/tofu?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="366">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;vegetables?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="367">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;milk?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="368">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;fruit?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="369">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lentils?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="370">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &#39;Create Co2 estimate&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="371">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &#39;User Profile&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="372">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="373">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="374">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;will take test with sedan mode of transportationand record result&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="375">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit root_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="376">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &quot;Sign Up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="377">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_name&quot;, with: &quot;christ&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="378">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_email&quot;, with: &quot;christ@god.com&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="379">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="380">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;user_password_confirmation&quot;, with: &quot;123456&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="381">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &quot;Sign up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="382">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;You have signed up successfully.&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="383">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;CO2 Estimator&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="384">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;Quiz&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="385">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;New CO2 Quiz&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="386">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for natural gas?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="387">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for fuel oil?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="388">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how much do you pay per month for electricity?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="389">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;sedan&#39;, :from =&gt; &quot;What is your primary mode of transportation?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="390">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;On average, how many miles do you travel per week?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="391">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;aluminum?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="392">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;plastic?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="393">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;glass?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="394">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    select &#39;yes&#39;, :from =&gt; &quot;paper?&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="395">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lamb?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="396">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beef?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="397">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;cheese?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="398">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;pork?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="399">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;turkey?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="400">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;chicken?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="401">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;tuna?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="402">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;eggs?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="403">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;potatoes?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="404">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;rice?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="405">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;nuts?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="406">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;beans/tofu?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="407">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;vegetables?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="408">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;milk?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="409">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;fruit?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="410">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;lentils?&quot;, with: 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="411">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &#39;Create Co2 estimate&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="412">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &#39;User Profile&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="413">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="414">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="415">
           
           
           <code class="ruby">end</code>
