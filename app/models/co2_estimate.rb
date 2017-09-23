@@ -1,4 +1,31 @@
 class Co2Estimate < ApplicationRecord
+    validates :user_id,
+      :nat_gas,
+      :fuel_oil,
+      :electricity,
+      :mode,
+      :miles,
+      :alum_re,
+      :glass_re,
+      :paper_re,
+      :lamb,
+      :beef,
+      :cheese,
+      :pork,
+      :turkey,
+      :chicken,
+      :tuna,
+      :eggs,
+      :potatoes,
+      :rice,
+      :nuts,
+      :beans,
+      :vegetables,
+      :milk,
+      :fruit,
+      :lentils,
+      :plastic_re, presence: true
+
   include Statsample::Test
   include Statsample::Summarizable
   include Math
@@ -128,12 +155,12 @@ class Co2Estimate < ApplicationRecord
       p_with_equal_variance = "#{t_2.probability_equal_variance} There is no statistically significant difference between states."
     end
     if t_2.probability_not_equal_variance < 0.05 && t_2.probability_not_equal_variance > 0.000001
-      p_with_equal_non_variance = '< 0.05 There is a statistically significant difference between states!'
+      p_with_non_equal_variance = '< 0.05 There is a statistically significant difference between states!'
     elsif t_2.probability_not_equal_variance <= 0.000001
-      p_with_equal_non_variance = '< 0.000001 There is a strongly significant difference between states!'
+      p_with_non_equal_variance = '< 0.000001 There is a strongly significant difference between states!'
     else
-      p_with_equal_non_variance = "#{t_2.probability_not_equal_variance} There is no statistically significant difference between states."
+      p_with_non_equal_variance = "#{t_2.probability_not_equal_variance} There is no statistically significant difference between states."
     end
-    return [p_with_equal_variance, p_with_equal_non_variance]
+    return [p_with_equal_variance, p_with_non_equal_variance]
   end
 end
