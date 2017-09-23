@@ -28,7 +28,4 @@ describe Co2Estimate do
   it { should validate_presence_of :lentils }
   it { should validate_presence_of :plastic_re }
 
-
-
-
 end
