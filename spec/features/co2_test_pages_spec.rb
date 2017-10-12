@@ -1,7 +1,5 @@
 require 'rails_helper'
 
-# 'bicycle', 'MAX', 'bus', 'truck (older than 2016)', 'small pickup', 'standard pickup', 'hybrid', 'sedan'
-
 describe "taking a co3 emittance test" do
   it 'will take test with walking mode of transportation and record result' do
     visit root_path
@@ -42,6 +40,9 @@ describe "taking a co3 emittance test" do
     fill_in "lentils?", with: 0
     click_button 'Create Co2 estimate'
     expect(page).to have_content 'Monthly Estimated Emittance: 33.5 lbs CO2 / month'
+    click_link 'User Profile'
+    click_button 'Delete Estimate'
+    expect(page).to have_content 'Estimate successfully deleted!'
   end
   it 'will take test with biking mode of transportationand record result' do
     visit root_path

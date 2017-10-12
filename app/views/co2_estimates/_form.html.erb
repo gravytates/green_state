@@ -7,19 +7,23 @@
       <%= form_for @co2_estimate do |f| %>
 
         <p><%= f.label :nat_gas, "On average, how much do you pay per month for natural gas?"%></p>
-        <%= f.number_field :nat_gas, min: 0, value: 0 %><br><br>
+        <%= f.number_field :nat_gas, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :fuel_oil, "On average, how much do you pay per month for fuel oil?"%></p>
-        <%= f.number_field :fuel_oil, min: 0, value: 0 %><br><br>
+        <%= f.number_field :fuel_oil, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :electricity, "On average, how much do you pay per month for electricity?"%></p>
-        <%= f.number_field :electricity, min: 0, value: 0 %><br><br>
+        <%= f.number_field :electricity, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :mode, "What is your primary mode of transportation?" %></p>
         <%= f.select :mode, ['...', 'walk', 'bicycle', 'MAX', 'bus', 'truck (older than 2016)', 'small pickup', 'standard pickup', 'hybrid', 'sedan'] %><br><br>
 
         <p><%= f.label :miles, "On average, how many miles do you travel per week?"%></p>
-        <%= f.number_field :miles, min: 0, value: 0 %><br><br>
+        <%= f.number_field :miles, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p>In general, do you recycle the following: </p>
 
@@ -39,52 +43,68 @@
         <p>On average, how much do you consume each of the following foods per month in <b>pounds?</b></p>
 
         <p><%= f.label :lamb, "lamb?"%></p>
-        <%= f.number_field :lamb, min: 0, value: 0 %><br><br>
+        <%= f.number_field :lamb, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :beef, "beef?"%></p>
-        <%= f.number_field :beef, min: 0, value: 0 %><br><br>
+        <%= f.number_field :beef, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :cheese, "cheese?"%></p>
-        <%= f.number_field :cheese, min: 0, value: 0 %><br><br>
+        <%= f.number_field :cheese, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :pork, "pork?"%></p>
-        <%= f.number_field :pork, min: 0, value: 0 %><br><br>
+        <%= f.number_field :pork, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :turkey, "turkey?"%></p>
-        <%= f.number_field :turkey, min: 0, value: 0 %><br><br>
+        <%= f.number_field :turkey, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :chicken, "chicken?"%></p>
-        <%= f.number_field :chicken, min: 0, value: 0 %><br><br>
+        <%= f.number_field :chicken, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :tuna, "tuna?"%></p>
-        <%= f.number_field :tuna, min: 0, value: 0 %><br><br>
+        <%= f.number_field :tuna, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :eggs, "eggs?"%></p>
-        <%= f.number_field :eggs, min: 0, value: 0 %><br><br>
+        <%= f.number_field :eggs, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :potatoes, "potatoes?"%></p>
-        <%= f.number_field :potatoes, min: 0, value: 0 %><br><br>
+        <%= f.number_field :potatoes, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :rice, "rice?"%></p>
-        <%= f.number_field :rice, min: 0, value: 0 %><br><br>
+        <%= f.number_field :rice, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :nuts, "nuts?"%></p>
-        <%= f.number_field :nuts, min: 0, value: 0 %><br><br>
+        <%= f.number_field :nuts, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :beans, "beans/tofu?"%></p>
-        <%= f.number_field :beans, min: 0, value: 0 %><br><br>
+        <%= f.number_field :beans, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :vegetables, "vegetables?"%></p>
-        <%= f.number_field :vegetables, min: 0, value: 0 %><br><br>
+        <%= f.number_field :vegetables, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :milk, "milk?"%></p>
-        <%= f.number_field :milk, min: 0, value: 0 %><br><br>
+        <%= f.number_field :milk, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :fruit, "fruit?"%></p>
-        <%= f.number_field :fruit, min: 0, value: 0 %><br><br>
+        <%= f.number_field :fruit, min: 0, value: 0, step: :any
+ %><br><br>
 
         <p><%= f.label :lentils, "lentils?"%></p>
-        <%= f.number_field :lentils, min: 0, value: 0 %><br><br>
+        <%= f.number_field :lentils, min: 0, value: 0, step: :any
+ %><br><br>
 
         <hr>
         <%= f.submit :class => "btn btn-default" %>
@@ -93,5 +113,5 @@
 
 
     </div>
-  </div> 
+  </div>
 </div>

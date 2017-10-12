@@ -100,19 +100,23 @@ class Co2Estimate < ApplicationRecord
   end
 
   def self.average_emittance
-    self.average(:monthly_emittance).round(2)
+    if self.any?
+      self.average(:monthly_emittance).round(2)
+    end
   end
 
   def self.standard_dev
-    results = self.pluck(:monthly_emittance)
-    totalSum = results.sum
-    average = totalSum/results.count
-    summation = 0
-    results.each do |r|
-      summation += ((r - average).abs ** 2)
+    if self.any?
+      results = self.pluck(:monthly_emittance)
+      totalSum = results.sum
+      average = totalSum / results.count.round(2)
+      summation = 0
+      results.each do |r|
+        summation += ((r - average).abs ** 2)
+      end
+      preSQRT = summation / (results.count - 1)
+      return Math.sqrt(preSQRT).round(3)
     end
-    preSQRT = summation / (results.count - 1)
-    return Math.sqrt(preSQRT).round(3)
   end
 
   def self.t_value
@@ -124,10 +128,16 @@ class Co2Estimate < ApplicationRecord
     w_st_dev = washington_rows.standard_dev
     o_avg = oregon_rows.average_emittance
     w_avg = washington_rows.average_emittance
-    numerator = o_avg - w_avg
-    preSQRT = ((o_st_dev ** 2)/o_n) + ((w_st_dev ** 2)/w_n)
-    denominator = Math.sqrt(preSQRT)
-    t_value = (numerator / denominator).round(3)
+    if o_avg && w_avg
+      numerator = o_avg - w_avg
+    end
+    if o_st_dev && w_st_dev
+      preSQRT = ((o_st_dev * o_st_dev)/o_n) + ((w_st_dev * w_st_dev)/w_n)
+    end
+    if preSQRT
+      denominator = Math.sqrt(preSQRT)
+      t_value = (numerator / denominator).round(3)
+    end
   end
 
 
@@ -136,7 +146,7 @@ class Co2Estimate < ApplicationRecord
     washington_data = joins(:user).merge(User.where(state: "Washington"))
     o_n = oregon_data.pluck(:monthly_emittance).count
     w_n = washington_data.pluck(:monthly_emittance).count
-    return (o_n - 1) + (w_n -1)
+    return (o_n - 1) + (w_n - 1)
   end
 
   def self.p_value
@@ -146,21 +156,24 @@ class Co2Estimate < ApplicationRecord
     w_data = washington_rows.pluck(:monthly_emittance)
     o = Daru::Vector.new(o_data)
     w = Daru::Vector.new(w_data)
-    t_2=Statsample::Test::T::TwoSamplesIndependent.new(o, w)
-    if t_2.probability_equal_variance < 0.05 && t_2.probability_equal_variance > 0.000001
-      p_with_equal_variance = '< 0.05 There is a statistically significant difference between states!'
-    elsif t_2.probability_equal_variance <= 0.000001
-      p_with_equal_variance = '< 0.000001 There is a strongly significant difference between states!'
-    else
-      p_with_equal_variance = "#{t_2.probability_equal_variance} There is no statistically significant difference between states."
+    if o && w
+      t_2=Statsample::Test::T::TwoSamplesIndependent.new(o, w)
+
+      if t_2.probability_equal_variance < 0.05 && t_2.probability_equal_variance > 0.000001
+        p_with_equal_variance = '< 0.05 There is a statistically significant difference between states!'
+      elsif t_2.probability_equal_variance <= 0.000001
+        p_with_equal_variance = '< 0.000001 There is a strongly significant difference between states!'
+      else
+        p_with_equal_variance = "#{t_2.probability_equal_variance} There is no statistically significant difference between states."
+      end
+      if t_2.probability_not_equal_variance < 0.05 && t_2.probability_not_equal_variance > 0.000001
+        p_with_non_equal_variance = '< 0.05 There is a statistically significant difference between states!'
+      elsif t_2.probability_not_equal_variance <= 0.000001
+        p_with_non_equal_variance = '< 0.000001 There is a strongly significant difference between states!'
+      else
+        p_with_non_equal_variance = "#{t_2.probability_not_equal_variance} There is no statistically significant difference between states."
+      end
+      return [p_with_equal_variance, p_with_non_equal_variance]
     end
-    if t_2.probability_not_equal_variance < 0.05 && t_2.probability_not_equal_variance > 0.000001
-      p_with_non_equal_variance = '< 0.05 There is a statistically significant difference between states!'
-    elsif t_2.probability_not_equal_variance <= 0.000001
-      p_with_non_equal_variance = '< 0.000001 There is a strongly significant difference between states!'
-    else
-      p_with_non_equal_variance = "#{t_2.probability_not_equal_variance} There is no statistically significant difference between states."
-    end
-    return [p_with_equal_variance, p_with_non_equal_variance]
   end
 end
