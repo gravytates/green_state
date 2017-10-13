@@ -41,6 +41,12 @@ class Co2EstimatesController  < ApplicationController
   end
 
   def data
+
+    @t_value = Co2Estimate.t_value
+    @deg_freedom = Co2Estimate.deg_freedom
+    @p_value = Co2Estimate.p_value
+    @state1 = params[:state1] ||= "Oregon"
+    @state2 = params[:state2] ||= "Washington"
     @oregon = Co2Estimate.oregon
     @washington = Co2Estimate.washington
     @idaho = Co2Estimate.idaho
@@ -80,5 +86,15 @@ private
       :plastic_re,
 
     )
+  end
+
+  def state_params
+    # defaults = { state1: 'Oregon', state2: 'Washington' }
+    # params.replace(defaults.merge(params))
+    params.require(:state_data).permit(
+      :state1,
+      :state2,
+    )
+    binding.pry
   end
 end

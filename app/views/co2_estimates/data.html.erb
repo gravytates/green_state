@@ -20,11 +20,21 @@
   </div>
   <div class="row">
     <div class="col-md-12">
+        <%#= form_for @state_data do |f| %>
+          <p><%#= f.label :state1, "First State" %></p>
+          <%#= f.select :state1, ['Oregon', 'Washington', 'Idaho'] %><br><br>
+
+          <p><%#= f.label :state2, "Second State" %></p>
+          <%#= f.select :state2, ['Washington', 'Oregon', 'Idaho' ] %><br><br>
+
+
+          <%#= f.submit :class => "btn btn-default" %>
+        <%# end %>
         <h3>Current Results (will update as more results are produced/deleted):</h3>
-        <p>T-value: <%= @co2_estimates.t_value %></p>
-        <p>Degrees of Freedom: <%= @co2_estimates.deg_freedom %></p>
-        <p>Probability with equal variance: <%= @co2_estimates.p_value[0] %></p>
-        <p>Probability with non-equal variance: <%= @co2_estimates.p_value[1] %></p>
+        <p>T-value: <%= @t_value %></p>
+        <p>Degrees of Freedom: <%= @deg_freedom %></p>
+        <p>Probability with equal variance: <%= @p_value[0] %></p>
+        <p>Probability with non-equal variance: <%= @p_value[1] %></p>
     </div>
   </div>
 
