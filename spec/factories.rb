@@ -15,6 +15,14 @@ FactoryGirl.define do
     password 123456
   end
 
+  factory :idaho_user, class: 'User' do
+    sequence(:name) { |n| "Ian#{n}"}
+    admin false
+    state "Idaho"
+    sequence(:email) { |n| "Iperson_#{n}@example.com" }
+    password 123456
+  end
+
 
   factory :admin_user, class: 'User' do
     sequence(:name) { |n| "Grady#{n}"}

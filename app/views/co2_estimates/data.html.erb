@@ -41,6 +41,12 @@
         <p>Total Records (n): <%= @oregon.count %></p>
         <p>Standard Deviation: <%= @oregon.standard_dev %></p>
     </div>
+    <div class="col-md-6">
+      <h3>Idaho</h3>
+        <p>Average Estimated Emittance: <%= @idaho.average_emittance %> lbs CO<sub>2</sub>/mo</p>
+        <p>Total Records (n): <%= @idaho.count %></p>
+        <p>Standard Deviation: <%= @idaho.standard_dev %></p>
+    </div>
   </div>
 
   <hr>
@@ -55,7 +61,8 @@
       <h4>Emittance between states over time</h4>
       <%= line_chart [
             {name: "Oregon", data: @oregon.map{|t| [t.user_id, t.monthly_emittance] }},
-            {name: "Washington", data: @washington.map{|t| [t.user_id, t.monthly_emittance] }}], discrete: false, xtitle: "Time of Quiz Result", ytitle: "Emittance (CO2 lbs/mo)", curve: true %>
+            {name: "Washington", data: @washington.map{|t| [t.user_id, t.monthly_emittance] }},
+            {name: 'Idaho', data: @idaho.map{|t| [t.user_id, t.monthly_emittance] }}], discrete: false, xtitle: "Time of Quiz Result", ytitle: "Emittance (CO2 lbs/mo)", curve: true %>
     </div>
   </div>
 

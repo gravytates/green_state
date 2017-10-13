@@ -41,6 +41,7 @@ class Co2Estimate < ApplicationRecord
 
   scope :oregon, -> { joins(:user).merge(User.where(state: "Oregon")) }
   scope :washington, -> { joins(:user).merge(User.where(state: "Washington")) }
+  scope :idaho, -> { joins(:user).merge(User.where(state: "Idaho")) }
 
 
   def exam_math(params)

@@ -12,11 +12,15 @@ User.create!(name: "Grady", admin: true, email: "adming@adming", password: "1234
 users = []
 100.times do |index|
   users.push(FactoryGirl.create(:oregon_user))
+  users.push(FactoryGirl.create(:washington_user))
+  users.push(FactoryGirl.create(:idaho_user))
 end
 
-100.times do |index|
-  users.push(FactoryGirl.create(:washington_user))
-end
+# 100.times do |index|
+# end
+#
+# 100.times do |index|
+# end
 
 users.each do |user|
   estimate = FactoryGirl.create(:co2_estimate)
