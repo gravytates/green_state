@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 
-# admin = FactoryGirl.create(:admin_user)
-# User.create!(name: "Grady", admin: true, email: "adming@adming", password: "123456", state: 'Oregon' )
+admin = FactoryGirl.create(:admin_user)
+User.create!(name: "Grady", admin: true, email: "adming@adming", password: "123456", state: 'Oregon' )
 users = []
 100.times do |index|
   users.push(FactoryGirl.create(:oregon_user))

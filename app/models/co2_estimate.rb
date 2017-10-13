@@ -1,6 +1,5 @@
 class Co2Estimate < ApplicationRecord
-    validates :user_id,
-      :nat_gas,
+    validates :nat_gas,
       :fuel_oil,
       :electricity,
       :mode,
