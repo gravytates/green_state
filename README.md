@@ -135,6 +135,13 @@ This application includes both Unit and User Integration testing.  It primarily 
 
 ![profile](https://user-images.githubusercontent.com/25161777/30040066-b7ff3050-918e-11e7-91ee-8a5eaa5f9ebc.png)
 
+### New Relic APM Integration
+
+![apm_database](https://user-images.githubusercontent.com/25161777/33810418-0bb14992-ddb9-11e7-9b63-a69d702be6d7.png)
+
+![model_overview](https://user-images.githubusercontent.com/25161777/33810417-0b9a9d0a-ddb9-11e7-990b-446a22753980.png)
+
+
 ### Test Coverage
 
 ## Authors

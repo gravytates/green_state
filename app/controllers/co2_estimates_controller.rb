@@ -11,7 +11,7 @@ class Co2EstimatesController  < ApplicationController
         flash[:alert] = "No results returned. Choose another filter!"
       end
     end
-  end
+  end          
 
   def new
     @co2_estimate = Co2Estimate.new
@@ -23,9 +23,9 @@ class Co2EstimatesController  < ApplicationController
     @co2_estimate = @user.co2_estimates.new(co2_estimate_params)
 
     if @co2_estimate.save
-      monthly_emittance = @co2_estimate.exam_math co2_estimate_params
-      @co2_estimate.update(:monthly_emittance => monthly_emittance)
-      flash[:notice] = ("Estimate successfully added! Estimated emissions: " + @co2_estimate.monthly_emittance.to_s + "lbs CO2 per month.")
+    monthly_emittance = @co2_estimate.exam_math co2_estimate_params
+    @co2_estimate.update(:monthly_emittance => monthly_emittance)
+    flash[:notice] = ("Estimate successfully added! Estimated emissions: " + @co2_estimate.monthly_emittance.to_s + "lbs CO2 per month.")
       redirect_to user_path(current_user)
     else
       render :new
@@ -41,15 +41,8 @@ class Co2EstimatesController  < ApplicationController
   end
 
   def data
-
-    @t_value = Co2Estimate.t_value
-    @deg_freedom = Co2Estimate.deg_freedom
-    @p_value = Co2Estimate.p_value
-    @state1 = params[:state1] ||= "Oregon"
-    @state2 = params[:state2] ||= "Washington"
     @oregon = Co2Estimate.oregon
     @washington = Co2Estimate.washington
-    @idaho = Co2Estimate.idaho
     @co2_estimates = Co2Estimate.all
   end
 
@@ -86,15 +79,5 @@ private
       :plastic_re,
 
     )
-  end
-
-  def state_params
-    # defaults = { state1: 'Oregon', state2: 'Washington' }
-    # params.replace(defaults.merge(params))
-    params.require(:state_data).permit(
-      :state1,
-      :state2,
-    )
-    binding.pry
   end
 end
