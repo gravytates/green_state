@@ -43,6 +43,7 @@ class Co2EstimatesController  < ApplicationController
   def data
     @oregon = Co2Estimate.oregon
     @washington = Co2Estimate.washington
+    @idaho = Co2Estimate.idaho
     @co2_estimates = Co2Estimate.all
   end
 

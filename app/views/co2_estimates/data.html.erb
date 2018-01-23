@@ -55,6 +55,7 @@
       <h4>Emittance between states over time</h4>
       <%= line_chart [
             {name: "Oregon", data: @oregon.map{|t| [t.user_id, t.monthly_emittance] }},
+            {name: "Idaho", data: @idaho.map{|t| [t.user_id, t.monthly_emittance] }},
             {name: "Washington", data: @washington.map{|t| [t.user_id, t.monthly_emittance] }}], discrete: false, xtitle: "Time of Quiz Result", ytitle: "Emittance (CO2 lbs/mo)", curve: true %>
     </div>
   </div>
