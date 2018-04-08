@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'jquery-rails'
 gem 'devise'
-gem 'paperclip', '~> 4.1'
+gem 'paperclip', '~> 5.2.0'
 gem 'rubocop', '~> 0.49.1', require: false
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
