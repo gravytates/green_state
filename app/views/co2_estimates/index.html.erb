@@ -35,9 +35,11 @@
     <tbody>
       <% @co2_estimates.each do |est| %>
         <tr>
-          <td><h4><em><%= est.user.name %></em></h4></td>
-          <td><%= est.user.state %></d>
-          <td><%= est.monthly_emittance %></td>
+          <% if est.user != nil %>
+            <td><h4><em><%= est.user.name %></em></h4></td>
+            <td><%= est.user.state %></d>
+            <td><%= est.monthly_emittance %></td>
+          <% end %>
         </tr>
       <% end %>
     </tbody>
