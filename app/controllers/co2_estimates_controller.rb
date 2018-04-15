@@ -76,7 +76,6 @@ private
       :fruit,
       :lentils,
       :plastic_re,
-
     )
   end
 end
