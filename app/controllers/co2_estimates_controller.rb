@@ -18,7 +18,6 @@ class Co2EstimatesController  < ApplicationController
   end
 
   def create
-
     @user = current_user
     @co2_estimate = @user.co2_estimates.new(co2_estimate_params)
 
